@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "title": "Sales",
+        "salary": 47000,
+        "branch_id":"",
+        "benifit_id":2
+    },
+    {
+        "id": 2,
+        "title": "Branch Manager",
+        "salary": 80000,
+        "branch_id":"",
+        "benifit_id":3
+    },
+    {
+        "id": 3,
+        "title": "seretary",
+        "salary": 40000,
+        "branch_id": "",
+        "benifit_id":1
+    },
+    {
+        "id": 4,
+        "title": "Accountant",
+        "salary": 52000,
+        "branch_id": "",
+        "benifit_id":2
+    },
+    {
+        "id": 5,
+        "title": "Wearhouse",
+        "salary": 50000,
+        "branch_id":"",
+        "benifit_id":1
+    },
+    {
+        "id": 6,
+        "title": "Human Resorces",
+        "salary": 60000,
+        "branch_id":"",
+        "benifit_id":3
+    },
+    {
+        "id": 7,
+        "title": "Chief Executive Officer",
+        "salary": 200000,
+        "branch_id":"",
+        "benifit_id":4
+    }
+]
