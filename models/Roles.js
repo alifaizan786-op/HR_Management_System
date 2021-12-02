@@ -24,13 +24,13 @@ Role.init(
             allowNull: false
         },
         //referencing the branch id from the branch table
-        branch_id: {
-            type: DataTypes.INTEGER,
-            references:{
-                model: 'branch',
-                key: 'id'
-            }
-        },
+        // branch_id: {
+        //     type: DataTypes.INTEGER,
+        //     references:{
+        //         model: 'branch',
+        //         key: 'id'
+        //     }
+        // },
         //referencing the benfit id from the benfit table
         benefit_id: {
             type: DataTypes.INTEGER,

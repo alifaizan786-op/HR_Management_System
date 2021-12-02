@@ -14,13 +14,13 @@ Branch.init(
             autoIncrement: true
         },
         //referencing to the employee table where it will look for the employee with a manager role and has to match with the branch id
-        manager: {
-            type: DataTypes.INTEGER,
-            references:{
-                model: 'employee',
-                key: 'id'
-            }
-        }
+        // manager: {
+        //     type: DataTypes.INTEGER,
+        //     references:{
+        //         model: 'employee',
+        //         key: 'id'
+        //     }
+        // }
     },
     {
         sequelize,
