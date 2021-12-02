@@ -67,6 +67,9 @@ Employee.init(
                 model: 'branch',
                 key: 'id'
             }
+        },
+        remainingPTO: {
+            type: DataTypes.INTEGER
         }
     },
     {
