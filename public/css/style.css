@@ -4,6 +4,11 @@ body {
     background-color: beige;
 }
 
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
 header {
     background-color: aqua;
     height: fit-content;
@@ -35,6 +40,8 @@ header {
 aside {
     background-color: aqua;
     margin: 10px 20px;
+    padding: 50px 10px;
+    overflow: auto;
 }
 
 .sideNav {
@@ -45,6 +52,7 @@ aside {
 .sideNavLinks {
     list-style-type: none;
     font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
     background-color: aqua;
     padding: 5px 10px;
 }
@@ -54,8 +62,9 @@ aside {
     font-family: 'Orbitron', sans-serif;
 }
 
-.hide {
-    display: none;
-    visibility: hidden;
+.loginDiv {
+    margin: 5%;
 }
+
+
 

@@ -9,7 +9,7 @@
     <title>HR Management System</title>
 </head>
 <body>
-    <header>
+    <header class="col-11">
         <nav class="row nav">
             <div class="col-4">
                 <figure id="comanylogo">
@@ -17,15 +17,15 @@
                 </figure>
             </div>
             <div class="col-4 hide">
-                Hello, please login 
+                
             </div>
             <div class="col-4">
-                Welcome, Toby! You are on the homepage
+                Hello, Toby! Welome back :)
             </div>
             <div class="col-2">
                 Date & Time
             </div>
-            <button type="button" class="col-1 btn btn-primary">Logout</button>
+            <button type="button" class="col-1 btn btn-primary hide">Login</button>
         </nav>
     </header>
     <div class="grid mainContainer" style="--bs-columns: 10; --bs-gap: 1rem;">
@@ -50,15 +50,50 @@
                 </ul>
             </nav>
         </aside>
-        <main class="col-6 mainDisplay">
-            <div class="col-5 timeOff">
-                <h1>Remaining Time Off</h1>
+        <main class="col-8 mainDisplay">
+            <div class="col-5 timeOff hide">
+                <h1 class="mainDisplayTitle">Remaining Time Off</h1>
                 <ul>
                     <li>
                         Paid Time Off:
                     </li>
                     <li>
                         Sick Leave:
+                    </li>
+                </ul>
+            </div>
+            <div class="row hide">
+                <div class="col-md-6 loginDiv">
+                  <h2>Login</h2>
+                  <form class="form login-form">
+                    <div class="form-group">
+                      <label for="email-login">email:</label>
+                      <input class="form-input" type="text" id="email-login" />
+                    </div>
+                    <div class="form-group">
+                      <label for="password-login">password:</label>
+                      <input class="form-input" type="password" id="password-login" />
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-primary" type="submit">login</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-5 timeOff">
+                <h1 class="mainDisplayTitle">Benefits</h1>
+                <ul>
+                    <li>
+                        Retirement Plan
+                    </li>
+                    <li>
+                        Dental Plan
+                    </li>
+                    <li>
+                        Health Plan
+                    </li>
+                    <li>
+                        Remaining Hours of Paid-Time Off: 
                     </li>
                 </ul>
             </div>
