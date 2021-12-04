@@ -21,7 +21,24 @@ router.get('/profile', withAuth, async(req, res) => {
     }
 });
 
-//all emp page
+//this page will render all employee data and will be only accessible for CFO/CEO/HR/Branch Manager
+router.get('/allemp', withAuth, async (req, res)=>{
+    try {
+        const userData = await Employee.findAll( {where : {branch_id : req.session.branchId}},{
+            attributes : { exclude: ['password']},
+            include: [{ model: Employee }]
+        });
+
+        const user = userData.get({ plain: true});
+
+        res.render('allemp', {
+            ...user,
+            loggedIn: true
+        });
+    } catch (err) {
+        res.status(500).json(err)
+    }
+});
 
 
 //time off page for emp
