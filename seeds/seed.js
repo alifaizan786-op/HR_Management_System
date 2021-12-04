@@ -2,7 +2,6 @@ const sequelize = require('../config/connection');
 const { Employee, Role, Benefit} = require('../models');
 const RoleData = require("./Json/Roles-seed.json");
 const EmployeeData = require('./Json/Employee-seed.json');
-const BranchData = require("./Json/Branch-seed.json");
 const BenefitsData = require("./Json/Benefits-seed.json");
 //test
 
