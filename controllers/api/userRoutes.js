@@ -34,7 +34,7 @@ router.post('/login', async (req, res)=> {
 
         req.session.save(() => {
             req.session.userId = userData.id;
-            req.session.userPrivilegeLevel =  
+            req.session.userPrivilegeLevel =  userData.privilege_Level
             req.session.loggedIn = true;
 
             res.json({ user: userData, message: 'You are now logged in'})
