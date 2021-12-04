@@ -34,7 +34,7 @@ router.post('/login', async (req, res)=> {
 
         req.session.save(() => {
             req.session.userId = userData.id;
-            req.session.userPrivilegeLevel = userData.privilege_Level;
+            req.session.userPrivilegeLevel =  
             req.session.loggedIn = true;
 
             res.json({ user: userData, message: 'You are now logged in'})
@@ -55,4 +55,29 @@ router.post('/logout', (req, res)=> {
     }
 });
 
+// Creating put request, only accessible by HR to change the privilege, role, branch or PTO
+// Creating put request, accessible by every emplyee to change the email and the password
+router.put('/:id', async (req, res) => {
+    try{
+        const userData = Employee.update(
+            {
+                privilege_Level: req.body.privilege_Level,
+                first_Name: req.body.first_Name,
+                last_Name: req.body.last_Name,
+                password: req.body.password,
+                email: req.body.email,
+                role_id: req.body.role_id,
+                branch_id: req.body.branch_id,
+                remainingPTO: req.body.remainingPTO
+            },
+            {
+                where: {
+                    id: req.params.id
+                },
+            });
+            res.status(200).json(userData)
+    } catch(err) {
+        res.status(500).json(err);
+    };
+});
 module.exports = router;
