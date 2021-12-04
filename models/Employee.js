@@ -60,13 +60,9 @@ Employee.init(
                 key: 'id'
             }
         },
-        //referencing the branch id from the branch table
         branch_id: {
             type: DataTypes.INTEGER,
-            references:{
-                model: 'branch',
-                key: 'id'
-            }
+           allowNull:false
         },
         remainingPTO: {
             type: DataTypes.INTEGER

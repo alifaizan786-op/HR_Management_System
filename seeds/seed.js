@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { Employee, Role, Branch, Benefit} = require('../models');
+const { Employee, Role, Benefit} = require('../models');
 const RoleData = require("./Json/Roles-seed.json");
 const EmployeeData = require('./Json/Employee-seed.json');
 const BranchData = require("./Json/Branch-seed.json");
@@ -8,11 +8,6 @@ const BenefitsData = require("./Json/Benefits-seed.json");
 
 const seedsDatabase = async () => {
     await sequelize.sync({ force: true });
-
-    await Branch.bulkCreate(BranchData,{
-        individualHooks: true,
-    returning: true,
-    });
 
     await Role.bulkCreate(RoleData, {
         individualHooks: true,
