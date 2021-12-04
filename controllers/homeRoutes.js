@@ -40,23 +40,94 @@ router.get('/allemp', withAuth, async (req, res)=>{
     }
 });
 
-
-//time off page for emp
-
+//time off page for emp, where employee can request timeoff
+router.get('/timeoff', withAuth, async (req, res)=> {
+    try {
+        res.render('timeoff', {
+            loggedIn: true
+        });
+    } catch (err) {
+        res.status(500).status(err)
+    }
+});
 
 //time off page for approvals for hr
+router.get('/timeoffappr', withAuth, async (req, res) => {
+    try {
+        const timeOffData = await Time_off.findAll({
+            include: [{
+                model: Time_off,
+                attributes: ['id', 'start_time','end_time','approval','emp_id','hours_used'],
+            }]
+        });
 
+        const timeOff = timeOffData.get({ plain: true });
 
-//all branch page for the CEO/CFO
+        res.render('timeoffappr',{
+            loggedIn: true
+        });
+    } catch (err) {
+        res.status(500).status(err)
+    }
+});
 
+//this page will have drop down for the CEO/CFO to select a branch
+router.get('/allemp/:id', withAuth, async (req, res)=>{
+    try {
+        const userData = await Employee.findAll( {where : {branch_id : req.params.id}},{
+            attributes : { exclude: ['password']},
+            include: [{ model: Employee }]
+        });
+
+        const user = userData.get({ plain: true});
+
+        res.render('allemp', {
+            ...user,
+            loggedIn: true
+        });
+    } catch (err) {
+        res.status(500).json(err)
+    }
+});
 
 // all employee page for branch manager/CEO/CFO
+router.get('/allemp/selectbranch', withAuth, async (req, res)=>{
+    try {
+        const userData = await Employee.findAll( {where : {branch_id : req.params.id}},{
+            attributes : { exclude: ['password']},
+            include: [{ model: Employee }]
+        });
 
+        const user = userData.get({ plain: true});
+
+        res.render('selectbranch', {
+            ...user,
+            loggedIn: true
+        });
+    } catch (err) {
+        res.status(500).json(err)
+    }
+});
 
 // benefits page
+router.get('/benefits', withAuth, async (req, res)=>{
+    try {
+        const benefitsData = await Benefit.findByPk( {where : {id : req.session.userId}},{
+            include: [{
+                  model: Benefit,
+                  attributes: ['id', 'retirement', 'dental','health', 'paidTO'],
+                }]
+        });
 
+        const benefit = benefitsData.get({ plain: true});
 
-//
+        res.render('benefits', {
+            loggedIn: true
+        });
+    } catch (err) {
+        res.status(500).json(err)
+    }
+});
 
 //if the user is logged in then they would be taken to the profile page
 router.get('/', (req, res) => {
