@@ -10,57 +10,55 @@
 </head>
 
 <body>
-  <header class="col-11">
-    <nav class="row nav">
-        <div class="col-4">
-            <figure id="comanylogo">
-                <img  src="/images/dundermifflinlogo.png" alt="company banner"/>
-            </figure>
-        </div>
-        <div class="hide">
-            Hello, please login 
-        </div>
-        <div class="">
-            Please Login
-        </div>
-        <div class="">
-            Date & Time
-        </div>
-        <button type="button" class="hide">Login</button>
-    </nav>
-  </header>
-  <div class="" style="">
-    <aside class="">
-        <nav class="">
-            <ul class="">
-                <li class="sideNavLinks">
-                    Benefits
-                </li>
-                <li class="sideNavLinks">
-                    Request Time Off
-                </li>
-                <li class="sideNavLinks hide">
-                    Accept Time Off
-                </li>
-                <li class="sideNavLinks">
-                    401k Account
-                </li>
-                <li class="sideNavLinks">
-                    Employee Handbook
-                </li>
-                <li class="sideNavLinks">
-                    View All Employees
-                </li>
-            </ul>
-        </nav>
-    </aside>
-    <main class="mainDisplay">
-      {{{ body }}}
-    </main>
-  </div>
-  <footer>
-    
-  </footer>
-</body>
+    <header class="col s12">
+        <nav class="row nav">
+            <div class="col s4">
+                <figure id="comanylogo">
+                    <img  src="public\images\dundermifflinlogo.png" alt="company banner"/>
+                </figure>
+            </div>
+            <div class="col s4 hide">
+                
+            </div>            
+            <div class="col s4 sideNavLinks">
+                Date & Time
+            </div>
+            <div class="col s4 sideNavLinks">
+                Please Login
+            </div>
 
+            <button type="button" class="col s1 btn btn-primary hide">Login</button>
+        </nav>
+    </header>
+    <div class="row mainContainer">
+        <aside class="col s3">
+            <nav class="">
+                <ul class="">
+                    <li class="sideNavLinks">
+                        Benefits
+                    </li>
+                    <li class="sideNavLinks">
+                        Request Time Off
+                    </li>
+                    <li class="sideNavLinks hide">
+                        Accept Time Off
+                    </li>
+                    <li class="sideNavLinks">
+                        401k Account
+                    </li>
+                    <li class="sideNavLinks">
+                        Employee Handbook
+                    </li>
+                    <li class="sideNavLinks">
+                        View All Employees
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="col s9 mainDisplay">
+        {{{ body }}}
+        </main>
+  </div>
+</body>
 </html>
