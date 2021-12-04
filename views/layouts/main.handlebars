@@ -5,25 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>HR Management System</title>
 </head>
 
 <body>
-    <header class="col s12">
+    <header class="col l12">
         <nav class="row nav">
-            <div class="col s4">
+            <div class="col l4">
                 <figure id="comanylogo">
-                    <img  src="public\images\dundermifflinlogo.png" alt="company banner"/>
+                    <img  src="\images\dundermifflinlogo.png" alt="company banner"/>
                 </figure>
-            </div>
-            <div class="col s4 hide">
-                
-            </div>            
-            <div class="col s4 sideNavLinks">
+            </div>         
+            <div class="col l4 offset-s6 sideNavLinks">
                 Date & Time
             </div>
-            <div class="col s4 sideNavLinks">
+            <div class="col l4 sideNavLinks">
                 Please Login
             </div>
 
@@ -31,34 +32,35 @@
         </nav>
     </header>
     <div class="row mainContainer">
-        <aside class="col s3">
+        <aside class="col l3 hide">
             <nav class="">
                 <ul class="">
-                    <li class="sideNavLinks">
+                    <li class="sideNavLinks hide">
                         Benefits
                     </li>
-                    <li class="sideNavLinks">
+                    <li class="sideNavLinks hide">
                         Request Time Off
                     </li>
                     <li class="sideNavLinks hide">
                         Accept Time Off
                     </li>
-                    <li class="sideNavLinks">
+                    <li class="sideNavLinks hide">
                         401k Account
                     </li>
-                    <li class="sideNavLinks">
+                    <li class="sideNavLinks hide">
                         Employee Handbook
                     </li>
-                    <li class="sideNavLinks">
+                    <li class="sideNavLinks hide">
                         View All Employees
                     </li>
                 </ul>
             </nav>
         </aside>
 
-        <main class="col s9 mainDisplay">
+        <main class="col l9 mainDisplay">
         {{{ body }}}
         </main>
   </div>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>

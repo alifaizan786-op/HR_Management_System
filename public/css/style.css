@@ -13,7 +13,7 @@ header {
     background-color: aqua;
     height: fit-content;
     padding: 1%;
-    margin: 20px
+    margin: 10px 10px;
 }
 
 .nav {
@@ -39,7 +39,7 @@ header {
 
 aside {
     background-color: aqua;
-    margin: 10px 20px;
+    margin: 10px 10px;
     padding: 50px 10px;
     overflow: auto;
 }
@@ -60,6 +60,8 @@ aside {
 .mainDisplay {
     background-color: aqua;
     font-family: 'Orbitron', sans-serif;
+    width: 100%;
+    margin: 10px 10px;
 }
 
 .loginDiv {
