@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Employee, Role, Branch, Benefit, Time_off  } = require('../../models');
+const { Employee, Role, Benefit, Time_off  } = require('../../models');
 
 
 //Creating a post request to create employee, this will only be accessible by HR

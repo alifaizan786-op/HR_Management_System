@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Employee, Role, Branch, Benefit, Time_off  } = require('../../models');
+const { Employee, Role, Benefit, Time_off  } = require('../../models');
 
 
 // Creating post request for the employee, to request time off
