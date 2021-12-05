@@ -1,32 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@621&display=swap');
 
-body {
-    background-color: beige;
-}
-
 .hide {
     display: none;
     visibility: hidden;
 }
 
 header {
-    background-color: aqua;
-    height: fit-content;
+    display: flex;
     padding: 1%;
     margin: 10px 10px;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    font-family: 'Orbitron', sans-serif;
-}
-
-#companylogo {
-    border: 2px solid black;
-    padding: 10px;
-    max-width: 100%;
-    height: auto;
+    height: 150px;
+    align-items: flex-start;
 }
 
 .mainContainer {
@@ -38,7 +22,6 @@ header {
 }
 
 aside {
-    background-color: aqua;
     margin: 10px 10px;
     padding: 50px 10px;
     overflow: auto;
@@ -49,16 +32,31 @@ aside {
     font-family: 'Orbitron', sans-serif;
 }
 
+.topNavDiv {
+    align-self: flex-start;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+}
+
+/* .topNavLinks {
+
+} */
+
 .sideNavLinks {
     list-style-type: none;
     font-family: 'Orbitron', sans-serif;
     font-size: 25px;
-    background-color: aqua;
     padding: 5px 10px;
 }
 
+.pageTitle {
+    color: white;
+}
+
 .mainDisplay {
-    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Orbitron', sans-serif;
     width: 100%;
     margin: 10px 10px;
@@ -66,6 +64,7 @@ aside {
 
 .loginDiv {
     margin: 5%;
+    align-items: center;
 }
 
 

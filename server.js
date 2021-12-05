@@ -11,6 +11,7 @@ const hbs = exphbs.create({ helpers });
 const path = require('path');
 
 const sequelize = require('./config/connection');
+// connects to our db through sequelize, and makes a Sessions table 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -26,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Sets up session and connect to our Sequelize db
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'classified',
   // Express session will use cookies by default, but we can specify options for those cookies by adding a cookies property to our session options.
   cookie: {
     // maxAge sets the maximum age for the session to be active. Listed in milliseconds.
