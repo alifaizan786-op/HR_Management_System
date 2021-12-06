@@ -13,51 +13,55 @@
     <title>HR Management System</title>
 </head>
 
-<body>
-    <header class="col l12">
-        <nav class="row nav">
-            <div class="col l4">
-                <figure id="comanylogo">
-                    <img  src="\images\dundermifflinlogo.png" alt="company banner"/>
-                </figure>
-            </div>         
-            <div class="col l4 offset-s6 sideNavLinks">
-                Date & Time
-            </div>
-            <div class="col l4 sideNavLinks">
-                Please Login
-            </div>
-
-            <button type="button" class="col s1 btn btn-primary hide">Login</button>
+<body class="grey darken-2">
+    <header class="col l12 indigo darken-4">
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+        <nav>
+        <div class="nav-wrapper indigo darken-4 topNavDiv">
+            <a href="#!" class="brand-logo">
+                <img src="\images\dundermifflinlogo.png" alt="company banner"/>
+            </a>
+            <ul class="right hide-on-med-and-down topNavLinks">
+                <li class="dateTime"></li>
+                <li>
+                    <!-- Conditionally render login or logout links -->
+                    {{#if logged_in}}
+                    <a href="/profile">Profile</a>
+                    <button class="no-button" id="logout">Logout</button>
+                    {{else}}
+                    <a href="/login">Login</a>
+                    {{/if}}
+                </li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger hide" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
         </nav>
     </header>
-    <div class="row mainContainer">
-        <aside class="col l3 hide">
+    <div class="row container">
+        <aside class="col l3 indigo darken-4 hide">
             <nav class="">
                 <ul class="">
-                    <li class="sideNavLinks hide">
+                    <li class="sideNavLinks">
                         Benefits
                     </li>
-                    <li class="sideNavLinks hide">
-                        Request Time Off
-                    </li>
-                    <li class="sideNavLinks hide">
-                        Accept Time Off
-                    </li>
-                    <li class="sideNavLinks hide">
+                    <li class="sideNavLinks">
                         401k Account
                     </li>
-                    <li class="sideNavLinks hide">
+                    <li class="sideNavLinks">
                         Employee Handbook
-                    </li>
-                    <li class="sideNavLinks hide">
-                        View All Employees
                     </li>
                 </ul>
             </nav>
         </aside>
 
-        <main class="col l9 mainDisplay">
+        <main class="col l9 mainDisplay indigo darken-4">
         {{{ body }}}
         </main>
   </div>
