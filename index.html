@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,56 +13,83 @@
     <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
     <title>HR Management System</title>
 </head>
-<body>
-    <body class="grey darken-2">
-        <header class="col l12 indigo darken-4">
-            <!-- Dropdown Structure -->
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!">one</a></li>
-                <li><a href="#!">two</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">three</a></li>
-            </ul>
-            <nav>
-            <div class="nav-wrapper indigo darken-4 topNavDiv">
-                <a href="#!" class="brand-logo hide">
-                    <img src="/public/images/dundermifflinlogo.png" alt="company banner"/>
-                </a>
-                <ul class="right hide-on-med-and-down topNavLinks">
-                    <li class="dateTime"></li>
-                    <li>
-                        Hello Jim
-                    </li>
-                    <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-trigger hide" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-                </ul>
-            </div>
-            </nav>
-        </header>
-        <div class="row container">
-            <aside class="col l3 indigo darken-4">
-                <nav class="">
-                    <ul class="">
-                        <li class="sideNavLinks">
-                            Benefits
-                        </li>
 
-                        <li class="sideNavLinks">
-                            401k Account
-                        </li>
-                        <li class="sideNavLinks">
-                            Employee Handbook
-                        </li>
-                        <li class="sideNavLinks">
-                            View All Employees
-                        </li>
+<body class="grey darken-2">
+    <header class="col l12 indigo darken-4">
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+        <nav>
+        <div class="nav-wrapper indigo darken-4 topNavDiv">
+            <a href="#!" class="brand-logo">
+                <img src="/public/images/dundermifflinlogo.png" alt="company banner"/>
+            </a>
+            <ul class="right topNavLinks">
+                <li class="dateTime">Date/Time</li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <div class="row container">
+        <aside class="col l3 indigo darken-4">
+            <nav class="">
+                <ul class="">
+                    <li class="sideNavLinks">
+                        Benefits
+                    </li>
+                    <li class="sideNavLinks">
+                        401k Account
+                    </li>
+                    <li class="sideNavLinks">
+                        Employee Handbook
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="col l8 mainDisplay indigo darken-4">
+            <section class="profileSection">
+                <div>
+                    <ul class="profilePageTitleDiv">
+                        <li class="profilePageTitle">{{user.name}}</li>
+                        <li class="profilePageTitle">{{user.role}}</li>
+                        <li class="profilePageTitle">{{user.branch}}</li>
+                        <li class="profilePageTitle">{{user.email}}</li>
                     </ul>
-                </nav>
-            </aside>
-        <main class="col s8 mainDisplay">
-            
+                </div>  
+                <div class="profilePageInfoDiv">
+                    <ul class="profilePageTitleInfoUL">
+                        <li class="profilePageInfo">Remaining Paid Time-Off: 100 hours</li>
+                        <li class="profilePageInfo">Remaining Sick Leave: 100 hours</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="requestTimeOffSection">
+                <h2 class="profilePageTitle">Request Time Off</h2>
+                <div>
+                    From: To: 
+                </div>
+                <div>
+                    Select hours of PTO off || *show remaining PTO off*
+                </div>
+                <div>
+                    Select hours of sick off || *show remaining sick time off*
+                </div>
+                <div>
+                    Select Manager
+                </div>
+                <div>
+                    *Request Time Off Button*
+                </div>
+            </section>
         </main>
-    </div>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </div>
+  <script type="text/javascript" src="/public/JS/profile.js"></script>
+  <script type="text/javascript" src="/public/JS/materialize.js"></script>
+  <script type="text/javascript" src="/public/JS/materialize.min.js"></script>
 </body>
 </html>

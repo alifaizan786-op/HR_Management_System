@@ -132,7 +132,7 @@ router.get('/benefits', withAuth, async (req, res)=>{
 //if the user is logged in then they would be taken to the profile page
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/profile');
+        res.redirect('/');
         return;
     }
     res.render('login');
