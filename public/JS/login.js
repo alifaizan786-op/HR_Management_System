@@ -1,4 +1,4 @@
-console.log('connected')
+console.log('connected to login.js')
 
 const loginFormHandler = async (event) => {
   event.preventDefault();

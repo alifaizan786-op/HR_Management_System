@@ -17,8 +17,14 @@ header {
     display: flex;
 }
 
-.timeOff {
-    padding: 20px;
+.mainDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Orbitron', sans-serif;
+    width: 100%;
+    margin: 10px 10px;
 }
 
 aside {
@@ -49,17 +55,32 @@ aside {
     padding: 5px 10px;
 }
 
-.pageTitle {
-    color: white;
+.profilePageTitleDiv {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.mainDisplay {
+.profilePageTitle {
+    color: white;
+    font-size:xx-large;
+    margin: 0px 20px;
+}
+
+.profilePageInfoDiv {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Orbitron', sans-serif;
-    width: 100%;
-    margin: 10px 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 2px white solid;
+}
+
+.profilePageInfo {
+    color: white;
+    font-size:x-large;
+    margin: 0px 20px;
+}
+
+.requestTimeOffSection {
+    border: 2px white solid;
 }
 
 .loginDiv {
