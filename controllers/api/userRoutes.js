@@ -18,6 +18,7 @@ router.post('/', async (req, res) => {
 // what to show this level of user and waht this level of user can do
 router.post('/login', async (req, res)=> {
     try {
+        console.log("hit this far")
         const userData = await Employee.findOne({ where: { email :req.body.email } })
 
         if(!userData) {
@@ -33,6 +34,7 @@ router.post('/login', async (req, res)=> {
         }
 
         req.session.save(() => {
+            console.log("got this far")
             req.session.userId = userData.id;
             req.session.userPrivilegeLevel =  userData.privilege_Level
             req.session.branchId = userData.branch_id

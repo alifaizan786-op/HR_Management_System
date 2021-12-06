@@ -66,8 +66,13 @@ Employee.init(
         },
         remainingPTO: {
             type: DataTypes.INTEGER
-        }
+        },
+        employeeStatus: {
+            type: DataTypes.TINYINT,
+            allowNull:false
+        },
     },
+
     {
         hooks:{
             async beforeCreate(newUserData){

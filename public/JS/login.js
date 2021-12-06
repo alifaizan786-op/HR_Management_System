@@ -5,9 +5,9 @@ const loginFormHandler = async (event) => {
 
   // Collect values from the login form
   const email = document.querySelector('#email-login').value.trim();
-  console.log(email);
+  // console.log(email);
   const password = document.querySelector('#password-login').value.trim();
-  console.log(password);
+  // console.log(password);
 
   if (email && password) {
     // Send a POST request to the API endpoint
@@ -16,13 +16,16 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
+    // console.log("request sent")
 
     if (response.ok) {
       console.log('successful');
       // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');
+      document.location.assign('/profile');
     } else {
+        console.log("fail");
       alert(response.statusText);
+      
     }
   }
 };
