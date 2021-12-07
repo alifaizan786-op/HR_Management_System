@@ -5,19 +5,23 @@ const withAuth = require('../utils/auth');
 // when a user logs in this is the first page they would see
 router.get('/profile', withAuth, async(req, res) => {
     try {
-        const userData = await Employee.findByPk(req.session.userId, {
+        
+        const userData = await Employee.findByPk(req.session.userId,
+             {
             attributes : { exclude: ['password'] },
             include: [{ model: Employee }],
-        });
-
+        }
+        );
+        
         const user = userData.get({ plain: true });
 
         res.render('profile', {
             ...user,
             loggedIn: true
         });
+    
     } catch (err) {
-        res.status(500).json(err);
+        res.status(501).json(err);
     }
 });
 
@@ -132,7 +136,7 @@ router.get('/benefits', withAuth, async (req, res)=>{
 //if the user is logged in then they would be taken to the profile page
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/profile');
+        res.redirect('/');
         return;
     }
     res.render('login');

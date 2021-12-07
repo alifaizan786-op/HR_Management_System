@@ -6,7 +6,9 @@ const BenefitsData = require("./Json/Benefits-seed.json");
 //test
 
 const seedsDatabase = async () => {
+    await sequelize.query('SET FOREIGN_KEY_CHECKS=0');
     await sequelize.sync({ force: true });
+    await sequelize.query('SET FOREIGN_KEY_CHECKS=1');
 
     await Role.bulkCreate(RoleData, {
         individualHooks: true,

@@ -4,10 +4,11 @@
         "privilege_Level": 2,
         "first_Name": "Michael",
         "last_Name": "Scott",
-        "password": "a52f81c3-d1ad-4fb2-a20f-0b5f684a8728",
+        "password": "password",
         "email": "Michael.scott@dundermifflin.com",
         "role_id": 2,
-        "branch_id": 1
+        "branch_id": 1,
+        "employeeStatus":1
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@
         "password": "1f5ef793-f4a3-49fd-a701-fe930dbbe853",
         "email": "jim.halpert@dundermifflin.com",
         "role_id": 1,
-        "branch_id": 1
+        "branch_id": 1,
+        "employeeStatus":1
     },
     {
         "id": 3,
@@ -27,7 +29,8 @@
         "password": "762d3409-25b1-414d-9177-cc013dacfd27",
         "email": "pam.beesly@dundermifflin.com",
         "role_id": 3,
-        "branch_id": 1
+        "branch_id": 1,
+        "employeeStatus":1
     },
     {
         "id": 4,
@@ -37,7 +40,8 @@
         "password": "edf2b55f-d605-4ca4-a0cc-19ba1336b405",
         "email": "dwight.schrute@dundermifflin.com",
         "role_id": 1,
-        "branch_id":1
+        "branch_id":1,
+        "employeeStatus":1
     },
     {
         "id": 5,
@@ -47,7 +51,8 @@
         "password": "12b189a5-a641-4fc0-80d8-6b44a86147d1",
         "email": "stanley.hudson@dundermifflin.com",
         "role_id": 1,
-        "branch_id":1
+        "branch_id":1,
+        "employeeStatus":1
     },
     {
         "id": 6,
@@ -57,7 +62,8 @@
         "password": "1dc4550f-b78e-44d5-9c29-7493bb0f1fbc",
         "email": "phyllis.lapin@dundermifflin.com",
         "role_id": 1,
-        "branch_id": 1
+        "branch_id": 1,
+        "employeeStatus":1
     },
     {
         "id": 7,
@@ -67,7 +73,8 @@
         "password": "ce727f2f-57a1-4559-a936-5e9f67ec9fdf",
         "email": "angela.martin@dundermifflin.com",
         "role_id": 1,
-        "branch_id": 1
+        "branch_id": 1,
+        "employeeStatus":1
     },
     {
         "id": 8,
@@ -77,7 +84,8 @@
         "password": "2c427a71-d4c6-4622-8334-a45fc8e6bacc",
         "email": "oscar.gutierrez@dundermifflin.com",
         "role_id": 4,
-        "branch_id":1
+        "branch_id":1,
+        "employeeStatus":1
     },
     {
         "id": 9,
@@ -87,7 +95,8 @@
         "password": "e199f658-4946-43f1-852f-079f685005a6",
         "email": "kevin.malone@dundermifflin.com",
         "role_id": 4,
-        "branch_id":1
+        "branch_id":1,
+        "employeeStatus":1
     },
     {
         "id": 10,
@@ -97,7 +106,8 @@
         "password": "2d5488ab-d3ff-421b-9e1a-a93ae74de549",
         "email": "toby.flenderson@dundermifflin.com",
         "role_id": 6,
-        "branch_id": 1
+        "branch_id": 1,
+        "employeeStatus":1
     },
     {
         "id": 11,
@@ -107,7 +117,8 @@
         "password": "6471056e-736b-48f2-b89e-f0686616e358",
         "email": "darryl.philibin@dundermifflin.com",
         "role_id": 5,
-        "branch_id":1
+        "branch_id":1,
+        "employeeStatus":1
     },
     {
         "id": 12,
@@ -117,6 +128,7 @@
         "password": "b73a244f-0412-4d6e-baee-3c036ad54366",
         "email": "robert.california@dundermifflin.com",
         "role_id": 7,
-        "branch_id": 3
+        "branch_id": 3,
+        "employeeStatus":1
     }
 ]
