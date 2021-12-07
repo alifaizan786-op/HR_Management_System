@@ -6,7 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/profile', withAuth, async(req, res) => {
     try {
         
-        const userData = await Employee.findByPk(req.session.userId,
+        const userData = await Employee.findOne(req.session.userId,
              {
             attributes : { exclude: ['password'] },
             include: [{ model: Employee }],
