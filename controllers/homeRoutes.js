@@ -5,22 +5,27 @@ const withAuth = require('../utils/auth');
 // when a user logs in this is the first page they would see
 router.get('/profile', withAuth, async(req, res) => {
     try {
-        
-        const userData = await Employee.findOne(req.session.userId,
+        console.log('1')
+        console.log(req.session.userId)
+        const userData = await Employee.findByPk(req.session.userId,
              {
             attributes : { exclude: ['password'] },
-            include: [{ model: Employee }],
         }
         );
-        
+        console.log('2')
+
         const user = userData.get({ plain: true });
 
+        console.log(user)
         res.render('profile', {
-            ...user,
+            user,
             loggedIn: true
-        });
+            
+        },
+        console.log('4'));
     
     } catch (err) {
+        console.log(err)
         res.status(501).json(err);
     }
 });
@@ -30,7 +35,6 @@ router.get('/allemp', withAuth, async (req, res)=>{
     try {
         const userData = await Employee.findAll( {where : {branch_id : req.session.branchId}},{
             attributes : { exclude: ['password']},
-            include: [{ model: Employee }]
         });
 
         const user = userData.get({ plain: true});
@@ -80,7 +84,6 @@ router.get('/allemp/:id', withAuth, async (req, res)=>{
     try {
         const userData = await Employee.findAll( {where : {branch_id : req.params.id}},{
             attributes : { exclude: ['password']},
-            include: [{ model: Employee }]
         });
 
         const user = userData.get({ plain: true});
@@ -99,7 +102,6 @@ router.get('/allemp/selectbranch', withAuth, async (req, res)=>{
     try {
         const userData = await Employee.findAll( {where : {branch_id : req.params.id}},{
             attributes : { exclude: ['password']},
-            include: [{ model: Employee }]
         });
 
         const user = userData.get({ plain: true});
