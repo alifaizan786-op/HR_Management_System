@@ -21,7 +21,7 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       console.log('successful');
       // If successful, redirect the browser to the profile page
-      document.location.assign('/profile');
+      document.location.assign('/');
     } else {
         console.log("fail");
       alert(response.statusText);
