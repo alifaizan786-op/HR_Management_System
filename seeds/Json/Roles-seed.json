@@ -25,13 +25,13 @@
     },
     {
         "id": 5,
-        "title": "Wearhouse",
+        "title": "Warehouse",
         "salary": 50000,
         "benifit_id":1
     },
     {
         "id": 6,
-        "title": "Human Resorces",
+        "title": "Human Resources",
         "salary": 60000,
         "benifit_id":3
     },

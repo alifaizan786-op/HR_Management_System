@@ -3,22 +3,18 @@ const { Employee, Role, Benefit, Time_off } = require('../models');
 const withAuth = require('../utils/auth');
 
 // when a user logs in this is the first page they would see
-router.get('/profile', withAuth, async(req, res) => {
+router.get('/', withAuth, async(req, res) => {
     try {
-        
-        const userData = await Employee.findOne(req.session.userId,
-             {
+        const userData = await Employee.findByPk(req.session.userId,{
             attributes : { exclude: ['password'] },
-            include: [{ model: Employee }],
-        }
-        );
-        
+        });
+
         const user = userData.get({ plain: true });
 
         res.render('profile', {
-            ...user,
-            loggedIn: true
-        });
+            user,
+            loggedIn: true   
+        })
     
     } catch (err) {
         res.status(501).json(err);
@@ -30,13 +26,22 @@ router.get('/allemp', withAuth, async (req, res)=>{
     try {
         const userData = await Employee.findAll( {where : {branch_id : req.session.branchId}},{
             attributes : { exclude: ['password']},
-            include: [{ model: Employee }]
+            include: [
+                {
+                  model: Benefit,
+                  attributes: ['id', 'retirement', 'dental', 'health', 'paidTO'],
+                },
+                {
+                    model: Role,
+                    attributes: ['id', 'title', 'salary'],
+                },
+              ],
         });
 
         const user = userData.get({ plain: true});
 
         res.render('allemp', {
-            ...user,
+            user,
             loggedIn: true
         });
     } catch (err) {
@@ -58,12 +63,7 @@ router.get('/timeoff', withAuth, async (req, res)=> {
 //time off page for approvals for hr
 router.get('/timeoffappr', withAuth, async (req, res) => {
     try {
-        const timeOffData = await Time_off.findAll({
-            include: [{
-                model: Time_off,
-                attributes: ['id', 'start_time','end_time','approval','emp_id','hours_used'],
-            }]
-        });
+        const timeOffData = await Time_off.findAll();
 
         const timeOff = timeOffData.get({ plain: true });
 
@@ -80,7 +80,6 @@ router.get('/allemp/:id', withAuth, async (req, res)=>{
     try {
         const userData = await Employee.findAll( {where : {branch_id : req.params.id}},{
             attributes : { exclude: ['password']},
-            include: [{ model: Employee }]
         });
 
         const user = userData.get({ plain: true});
@@ -99,7 +98,6 @@ router.get('/allemp/selectbranch', withAuth, async (req, res)=>{
     try {
         const userData = await Employee.findAll( {where : {branch_id : req.params.id}},{
             attributes : { exclude: ['password']},
-            include: [{ model: Employee }]
         });
 
         const user = userData.get({ plain: true});
@@ -116,12 +114,7 @@ router.get('/allemp/selectbranch', withAuth, async (req, res)=>{
 // benefits page
 router.get('/benefits', withAuth, async (req, res)=>{
     try {
-        const benefitsData = await Benefit.findByPk( {where : {id : req.session.userId}},{
-            include: [{
-                  model: Benefit,
-                  attributes: ['id', 'retirement', 'dental','health', 'paidTO'],
-                }]
-        });
+        const benefitsData = await Benefit.findByPk({where : {id : req.session.userId}});
 
         const benefit = benefitsData.get({ plain: true});
 
