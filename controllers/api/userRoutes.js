@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Employee, Role, Benefit, Time_off  } = require('../../models');
+const { Employee, Role, Benefit, Time_off } = require('../../models');
 
 
 //Creating a post request to create employee, this will only be accessible by HR
@@ -16,12 +16,12 @@ router.post('/', async (req, res) => {
 // Creating a post request for the employee to sign in
 // and save the level of privilege in the cookies, for the handlebars to detemine
 // what to show this level of user and waht this level of user can do
-router.post('/login', async (req, res)=> {
+router.post('/login', async (req, res) => {
     try {
         console.log("hit this far")
-        const userData = await Employee.findOne({ where: { email :req.body.email } })
+        const userData = await Employee.findOne({ where: { email: req.body.email } })
 
-        if(!userData) {
+        if (!userData) {
             res.status(400).json({ message: 'user does not exists' });
             return;
         }
@@ -36,11 +36,11 @@ router.post('/login', async (req, res)=> {
         req.session.save(() => {
             console.log("got this far")
             req.session.userId = userData.id;
-            req.session.userPrivilegeLevel =  userData.privilege_Level
+            req.session.userPrivilegeLevel = userData.privilege_Level
             req.session.branchId = userData.branch_id
             req.session.loggedIn = true;
 
-            res.json({ user: userData, message: 'You are now logged in'})
+            res.json({ user: userData, message: 'You are now logged in' })
         });
     } catch (err) {
         res.status(400).json(err);
@@ -48,9 +48,9 @@ router.post('/login', async (req, res)=> {
 });
 
 // Creating a post request for signout, which will also destroy cookies
-router.post('/logout', (req, res)=> {
-    if(req.session.loggedIn) {
-        req.session.destroy(()=> {
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
             res.status(204).end();
         });
     } else {
@@ -61,7 +61,7 @@ router.post('/logout', (req, res)=> {
 // Creating put request, only accessible by HR to change the privilege, role, branch or PTO
 // Creating put request, accessible by every emplyee to change the email and the password
 router.put('/:id', async (req, res) => {
-    try{
+    try {
         const userData = Employee.update(
             {
                 privilege_Level: req.body.privilege_Level,
@@ -78,8 +78,8 @@ router.put('/:id', async (req, res) => {
                     id: req.params.id
                 },
             });
-            res.status(200).json(userData)
-    } catch(err) {
+        res.status(200).json(userData)
+    } catch (err) {
         res.status(500).json(err);
     };
 });

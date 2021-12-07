@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--Import Google Icon Font-->
+    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>HR Management System</title>
 </head>
@@ -23,25 +23,26 @@
             <li><a href="#!">three</a></li>
         </ul>
         <nav>
-        <div class="nav-wrapper indigo darken-4 topNavDiv">
-            <a href="#!" class="brand-logo">
-                <img src="\images\dundermifflinlogo.png" alt="company banner"/>
-            </a>
-            <ul class="right hide-on-med-and-down topNavLinks">
-                <li class="dateTime"></li>
-                <li>
-                    <!-- Conditionally render login or logout links -->
-                    {{#if logged_in}}
-                    <a href="/profile">Profile</a>
-                    <button class="no-button" id="logout">Logout</button>
-                    {{else}}
-                    <a href="/login">Login</a>
-                    {{/if}}
-                </li>
-                <!-- Dropdown Trigger -->
-                <li><a class="dropdown-trigger hide" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
-        </div>
+            <div class="nav-wrapper indigo darken-4 topNavDiv">
+                <a href="#!" class="brand-logo">
+                    <img src="\images\dundermifflinlogo.png" alt="company banner" />
+                </a>
+                <ul class="right hide-on-med-and-down topNavLinks">
+                    <li class="dateTime"></li>
+                    <li>
+                        <!-- Conditionally render login or logout links -->
+                        {{#if logged_in}}
+                        <a href="/profile">Profile</a>
+                        <button class="no-button" id="logout">Logout</button>
+                        {{else}}
+                        <a href="/login">Login</a>
+                        {{/if}}
+                    </li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger hide" href="#!" data-target="dropdown1">Dropdown<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <div class="row container">
@@ -62,9 +63,10 @@
         </aside>
 
         <main class="col l9 mainDisplay indigo darken-4">
-        {{{ body }}}
+            {{{ body }}}
         </main>
-  </div>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
+
 </html>
