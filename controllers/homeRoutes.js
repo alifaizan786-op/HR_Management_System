@@ -85,7 +85,7 @@ router.get('/allemp/:id', withAuth, async (req, res)=>{
         const user = userData.get({ plain: true});
 
         res.render('allemp', {
-            ...user,
+            user,
             loggedIn: true
         });
     } catch (err) {
@@ -103,7 +103,7 @@ router.get('/allemp/selectbranch', withAuth, async (req, res)=>{
         const user = userData.get({ plain: true});
 
         res.render('selectbranch', {
-            ...user,
+            user,
             loggedIn: true
         });
     } catch (err) {
