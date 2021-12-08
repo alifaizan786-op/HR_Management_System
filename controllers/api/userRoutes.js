@@ -18,7 +18,6 @@ router.post('/', async (req, res) => {
 // what to show this level of user and waht this level of user can do
 router.post('/login', async (req, res) => {
     try {
-        console.log("hit this far")
         const userData = await Employee.findOne({ where: { email: req.body.email } })
 
         if (!userData) {
@@ -32,15 +31,20 @@ router.post('/login', async (req, res) => {
             res.status(400).json({ message: 'Email/password is incorrect' });
             return;
         }
-
+        const roleData = await Role.findOne({ where: { id: userData.role_id } });
+        console.log(roleData.title)
         req.session.save(() => {
-            console.log("got this far")
             req.session.userId = userData.id;
-            req.session.userPrivilegeLevel = userData.privilege_Level
-            req.session.branchId = userData.branch_id
+            req.session.userPrivilegeLevel = userData.privilege_Level;
+            req.session.branchId = userData.branch_id;
             req.session.loggedIn = true;
 
-            res.json({ user: userData, message: 'You are now logged in' })
+
+            res.json({
+                user: userData, 
+                role: roleData.title,
+                message: 'You are now logged in'
+            })
         });
     } catch (err) {
         res.status(400).json(err);

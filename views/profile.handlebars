@@ -1,16 +1,15 @@
 <section class="profileSection">
     <div>
         <ul class="profilePageTitleDiv">
-            <li class="profilePageTitle">Name: {{user.first_name}} {{user.last_name}}</li>
-            <li class="profilePageTitle">Role: {{user.role_id}}</li>
+            <li class="profilePageTitle">Name: {{user.first_Name}} {{user.last_Name}}</li>
+            <li class="profilePageTitle">Role: {{role}}</li>
             <li class="profilePageTitle">Branch: {{user.branch_id}}</li>
             <li class="profilePageTitle">Email: {{user.email}}</li>
         </ul>
     </div>  
     <div class="profilePageInfoDiv">
         <ul class="profilePageTitleInfoUL">
-            <li class="profilePageInfo">Remaining Paid Time-Off: 100 hours</li>
-            <li class="profilePageInfo">Remaining Sick Leave: 100 hours</li>
+            <li class="profilePageInfo">Remaining PTO:{{user.remainingPTO}}</li>
         </ul>
     </div>
 </section>
