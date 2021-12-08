@@ -1,3 +1,72 @@
-<section class="viewAllSection">
+<div class="container">
+        <!-- Page Content goes here -->
+        <table class="striped responsive-table">
+            <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Branch</th>
+                  <th>Role</th>
+                  <th>Benefits</th>
+                  <th>Salary</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                  
+              </tr>
+            </thead>
+            {{#each Employee-seed}}
+            <tbody>
+              <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.first_name}}</td>
+                <td>{{this.last_name</td>
+                <td>{{this.branch_id}}</td>
+                <td>{{this.role_id}}</td>
+                <td>3</td>
+                <td>$80,000</td>
+                <td>{{this.email}}</td>
+                <td>
+                    <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
+                    <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
+                </td>
+              </tr>
+              {{/each}}
 
-</section>
+              <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!--sidenav-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, options);
+});
+
+// Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+// var collapsibleElem = document.querySelector('.collapsible');
+// var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+</script>
+
+
+
+<!--Modal-->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+    </script>
