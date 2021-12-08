@@ -6,22 +6,33 @@
 }
 
 header {
-    display: flex;
     padding: 1%;
     margin: 10px 10px;
     height: 150px;
-    align-items: flex-start;
 }
 
-.mainContainer {
+.topNavBar {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 0% 5%;
+}
+
+.brand-logo {
+    flex: 1 0 auto;
+}
+
+.sideAndMain {
+    width: 100%;
     display: flex;
 }
 
 .mainDisplay {
+    flex: 2 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     font-family: 'Orbitron', sans-serif;
     width: 100%;
     margin: 10px 10px;
@@ -30,7 +41,6 @@ header {
 aside {
     margin: 10px 10px;
     padding: 50px 10px;
-    overflow: auto;
 }
 
 .sideNav {
@@ -44,12 +54,9 @@ aside {
     font-size: 20px;
 }
 
-/* .topNavLinks {
-
-} */
-
 .sideNavLinks {
     list-style-type: none;
+    display: inline-block;
     font-family: 'Orbitron', sans-serif;
     font-size: 25px;
     padding: 5px 10px;
@@ -83,9 +90,21 @@ aside {
     border: 2px white solid;
 }
 
+/* login page */
+
 .loginDiv {
     margin: 5%;
-    align-items: center;
+    align-self: center;
+}
+
+.loginTitle {
+    color: white;
+    font-size:xx-large;
+}
+
+.loginInput {
+    color: white;
+    font-size:x-large;
 }
 
 
