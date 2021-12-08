@@ -1,6 +1,6 @@
-var dateTime = moment().format("MMM Do, YYYY, hh:mm");
+// var dateTime = moment().format("MMM Do, YYYY, hh:mm");
 
-console.log('connected')
+
 
 const loginFormHandler = async (event) => {
   event.preventDefault();
@@ -29,15 +29,15 @@ const loginFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+// document
+  // .querySelector('.login-form')
+  // .addEventListener('submit', loginFormHandler);
 
-$(".dateTime").text(dateTime);
+// $(".dateTime").text(dateTime);
 
-console.log(dateTime)
+// console.log(dateTime)
 
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.dropdown-trigger');
-  var instances = M.Dropdown.init(elems, options);
+  // var instances = M.Dropdown.init(elems, options);
 });
