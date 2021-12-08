@@ -112,13 +112,13 @@ router.get('/allemp/selectbranch', withAuth, async (req, res)=>{
 });
 
 // benefits page
-router.get('/benefits', withAuth, async (req, res)=>{
+router.get('/Benefit', withAuth, async (req, res)=>{
     try {
         const benefitsData = await Benefit.findByPk({where : {id : req.session.userId}});
 
         const benefit = benefitsData.get({ plain: true});
 
-        res.render('benefits', {
+        res.render('Benefit', {
             loggedIn: true
         });
     } catch (err) {
