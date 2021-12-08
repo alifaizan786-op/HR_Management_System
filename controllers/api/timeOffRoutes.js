@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Employee, Role, Benefit, Time_off  } = require('../../models');
+const { Employee, Role, Benefit, Time_off } = require('../../models');
 
 
 // Creating post request for the employee, to request time off
@@ -26,12 +26,12 @@ router.put('/:id', async (req, res) => {
                 hours_used: req.body.hours_used
             },
             {
-                where:{
+                where: {
                     id: req.params.id
                 },
             })
-            res.status(200).json(userTimeOff)
-    } catch(err) {
+        res.status(200).json(userTimeOff)
+    } catch (err) {
         res.status(500).json(err)
     };
 });

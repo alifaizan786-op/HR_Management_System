@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require ('../config/connection');
+const sequelize = require('../config/connection');
 
 class Role extends Model {
 }
@@ -7,19 +7,19 @@ class Role extends Model {
 Role.init(
     {
         //creating id column
-        id:{
+        id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
         //creating a role title column
-        title:{
+        title: {
             type: DataTypes.STRING,
             allowNull: false
         },
         //creating a role salary column
-        salary:{
+        salary: {
             type: DataTypes.DECIMAL,
             allowNull: false
         },
@@ -34,7 +34,7 @@ Role.init(
         //referencing the benfit id from the benfit table
         benefit_id: {
             type: DataTypes.INTEGER,
-            references:{
+            references: {
                 model: 'benefit',
                 key: 'id'
             }
