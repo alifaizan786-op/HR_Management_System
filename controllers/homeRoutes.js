@@ -7,10 +7,11 @@ router.get('/', withAuth, async (req, res) => {
     try {
         const userData = await Employee.findByPk(req.session.userId, {
             attributes: { exclude: ['password'] },
+            include: {model:Role}
         });
 
         const user = userData.get({ plain: true });
-
+        console.log(user)
         res.render('profile', {
             user,
             loggedIn: true
@@ -39,7 +40,7 @@ router.get('/allemp', withAuth, async (req, res) => {
         });
 
         const user = userData.get({ plain: true });
-
+       
         res.render('allemp', {
             user,
             loggedIn: true
