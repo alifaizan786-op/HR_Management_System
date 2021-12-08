@@ -4,27 +4,27 @@
         "retirement": "plan 1",
         "dental": "Plan 1",
         "health": "Plan 1",
-        "paidTO":40 
+        "paidTO": 40
     },
     {
         "id": 2,
         "retirement": "Plan 2",
         "dental": "Plan 2",
         "health": "Plan 2",
-        "paidTO":80
+        "paidTO": 80
     },
     {
         "id": 3,
         "retirement": "Plan 3",
-        "dental":"Plan 3" ,
+        "dental": "Plan 3",
         "health": "Plan 3",
-        "paidTO":120
+        "paidTO": 120
     },
     {
         "id": 4,
         "retirement": "Plan 4",
-        "dental":"Plan 4" ,
+        "dental": "Plan 4",
         "health": "Plan 4",
-        "paidTO":160
+        "paidTO": 160
     }
 ]
