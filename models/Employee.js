@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require ('../config/connection');
-const bcrypt = require ('bcrypt');
+const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
 class Employee extends Model {
     checkPassword(loginPw) {
@@ -11,17 +11,17 @@ class Employee extends Model {
 Employee.init(
     {
         //creating id column
-        id:{
+        id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
         //creating privilege column
-        privilege_Level:{
+        privilege_Level: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            validate:{
+            validate: {
                 max: 3
             }
         },
@@ -39,7 +39,7 @@ Employee.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate:{
+            validate: {
                 len: [8]
             }
         },
@@ -55,32 +55,32 @@ Employee.init(
         //referncing the role id from role table
         role_id: {
             type: DataTypes.INTEGER,
-            references:{
+            references: {
                 model: 'role',
                 key: 'id'
             }
         },
         branch_id: {
             type: DataTypes.INTEGER,
-           allowNull:false
+            allowNull: false
         },
         remainingPTO: {
             type: DataTypes.INTEGER
         },
         employeeStatus: {
             type: DataTypes.TINYINT,
-            allowNull:false
+            allowNull: false
         },
     },
 
     {
-        hooks:{
-            async beforeCreate(newUserData){
+        hooks: {
+            async beforeCreate(newUserData) {
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 return newUserData
             },
-            async beforeUpdate(updatedUserData){
-                updatedUserData.password = await bcrypt.hash(updatedUserData,10);
+            async beforeUpdate(updatedUserData) {
+                updatedUserData.password = await bcrypt.hash(updatedUserData, 10);
                 return updatedUserData
             }
         },

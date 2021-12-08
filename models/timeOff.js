@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require ('../config/connection');
+const sequelize = require('../config/connection');
 
 class Time_off extends Model {
 }
@@ -31,7 +31,7 @@ Time_off.init(
         // creating a column, and refercing the employee from the employee id
         emp_id: {
             type: DataTypes.INTEGER,
-            references:{
+            references: {
                 model: 'employee',
                 key: 'id'
             }
@@ -39,7 +39,7 @@ Time_off.init(
         // creating a column, for how many hours are being used by this certain request
         hours_used: {
             type: DataTypes.INTEGER,
-            allowNull:false
+            allowNull: false
         }
 
     },
