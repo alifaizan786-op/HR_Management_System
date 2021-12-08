@@ -1,317 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container">
+        <!-- Page Content goes here -->
+        <table class="striped responsive-table">
+            <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Branch</th>
+                  <th>Role</th>
+                  <th>Benefits</th>
+                  <th>Salary</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                  
+              </tr>
+            </thead>
+            {{#each Employee-seed}}
+            <tbody>
+              <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.first_name}}</td>
+                <td>{{this.last_name</td>
+                <td>{{this.branch_id}}</td>
+                <td>{{this.role_id}}</td>
+                <td>3</td>
+                <td>$80,000</td>
+                <td>{{this.email}}</td>
+                <td>
+                    <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
+                    <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
+                </td>
+              </tr>
+              {{/each}}
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="style/style.css">
-  <title>Document</title>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<body>
-  <nav>
-    <div class="nav-wrapper">
-      <img src="images/dundermifflinlogo.png" alt="company banner" />
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li>Welcome</li>
-        <li><a href="collapsible.html">Logout</a></li>
-      </ul>
-    </div>
-  </nav>
+<!--sidenav-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, options);
+});
 
-  <div class="container">
-    <!-- Page Content goes here -->
+// Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+// var collapsibleElem = document.querySelector('.collapsible');
+// var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
 
+// Or with jQuery
 
-    <!--Table-->
-    <table class="striped responsive-table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Branch</th>
-          <th>Role</th>
-          <th>Benefits</th>
-          <th>Salary</th>
-          <th>Email</th>
-          <th>Action</th>
-
-        </tr>
-      </thead>
-
-
-      <!--Temporary Hardcoded Table Data With Edit and Delete Buttons-->
-
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Michael</td>
-          <td>Scott</td>
-          <td>1</td>
-          <td>Branch Manager</td>
-          <td>3</td>
-          <td>$80,000</td>
-          <td>michael.scott@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jim</td>
-          <td>Halpert</td>
-          <td>1</td>
-          <td>Sales</td>
-          <td>2</td>
-          <td>$47,000</td>
-          <td>jim.halpert@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Pam</td>
-          <td>Beesly</td>
-          <td>1</td>
-          <td>Secretary</td>
-          <td>1</td>
-          <td>$40,000</td>
-          <td>pam.beesly@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Dwight</td>
-          <td>Schrute</td>
-          <td>1</td>
-          <td>Sales</td>
-          <td>2</td>
-          <td>$47,000</td>
-          <td>dwight.schrute@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Stanley</td>
-          <td>Hudson</td>
-          <td>1</td>
-          <td>Sales</td>
-          <td>2</td>
-          <td>$47,000</td>
-          <td>stanley.hudson@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Phillis</td>
-          <td>Lapin</td>
-          <td>1</td>
-          <td>Human Resources</td>
-          <td>3</td>
-          <td>$60,000</td>
-          <td>phillis.lapin@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Angela</td>
-          <td>Martin</td>
-          <td>1</td>
-          <td>Chief Executive Officer</td>
-          <td>4</td>
-          <td>$200,000</td>
-          <td>angela.martin@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Oscar</td>
-          <td>Gutierrez</td>
-          <td>1</td>
-          <td>Accountant</td>
-          <td>2</td>
-          <td>$52,000</td>
-          <td>oscar.gutierrez@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Kevin</td>
-          <td>Malone</td>
-          <td>1</td>
-          <td>Accountant</td>
-          <td>2</td>
-          <td>$52,000</td>
-          <td>kevin.malone@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>Toby</td>
-          <td>Flenderson</td>
-          <td>1</td>
-          <td>Human Resources</td>
-          <td>3</td>
-          <td>$60,000</td>
-          <td>toby.flenderson@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Darryl</td>
-          <td>Philibin</td>
-          <td>1</td>
-          <td>Warehouse</td>
-          <td>1</td>
-          <td>$50,000</td>
-          <td>darryl.philibin@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>Robert</td>
-          <td>California</td>
-          <td>3</td>
-          <td>Chief Executive Officer</td>
-          <td>4</td>
-          <td>$200,000</td>
-          <td>robert.california@dundermifflin.com</td>
-          <td>
-            <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-            <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
-    <br>
-    <a href="button" type="button" class="btn blue btn-small">Add</a>
-    <br>
-    <br>
-    <br>
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+</script>
 
 
 
-  </div>
-  
-  <div class="container center-align">
-        <h4>Add New Employee</h4>
-  </div>  
-  
-  
-  
-
-  <div class="container center-align">
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal">New Employee</a>
-
-  <!-- Modal Structure -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <h4>New Employee</h4>
-      <div class="container center-align">
-        <div class="row">
-          <form class="col s12">
-
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="Branch" type="text" class="validate">
-                <label for="Branch">Branch</label>
-              </div>
-               <div class="input-field col s6">
-                <input id="Role" type="text" class="validate">
-                <label for="Role">Role</label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="Benefits" type="text" class="validate">
-                <label for="Benefits">Benefits</label>
-              </div>
-               <div class="input-field col s6">
-                <input id="Salary" type="text" class="validate">
-                <label for="Salary">Salary</label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
-            </div>
-          </form>
-        </div>
-        <a href="button" type="button" class="btn blue btn-large center-align">Add New Employee</a>
-    </div>
-   
-  </div>
-  </div>
-  <br>
-  <br>
-  <br>
-
-
-
-
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
-  <script>
+<!--Modal-->
+    <script>
     document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems, options);
@@ -323,6 +70,3 @@
     $('.modal').modal();
   });
     </script>
-</body>
-
-</html>
