@@ -28,19 +28,21 @@ router.get('/allemp', withAuth, async (req, res) => {
     try {
         const userData = await Employee.findAll({ where: { branch_id: req.session.branchId } }, {
             attributes: { exclude: ['password'] },
-            include:{
-                    model: Benefit,
-                    attributes: ['id', 'retirement', 'dental', 'health', 'paidTO'],
 
-                    model: Role,
-                    attributes: ['id', 'title', 'salary'],
-                }
+            include: [
+                {
+                  model: Role,
+                  attributes: ['title'],
+                },
+              ],
+
         });
-
-        const user = userData.get({ plain: true });
+        // const users = userData.map((project) => project.get({ plain: true }));
+        const users = userData.map((user)=> user.get({ plain:true }));
+        console.log(users)
        
-        res.render('allemp', {
-            user,
+        res.render('viewAllEmployees', {
+            users,
             loggedIn: true
         });
     } catch (err) {
