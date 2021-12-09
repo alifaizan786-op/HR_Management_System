@@ -8,6 +8,7 @@ router.get('/', withAuth, async (req, res) => {
         const userData = await Employee.findByPk(req.session.userId, {
             attributes: { exclude: ['password'] },
             include: {model:Role}
+            // include:{model:Benefit}
         });
 
         const user = userData.get({ plain: true });
@@ -27,16 +28,13 @@ router.get('/allemp', withAuth, async (req, res) => {
     try {
         const userData = await Employee.findAll({ where: { branch_id: req.session.branchId } }, {
             attributes: { exclude: ['password'] },
-            include: [
-                {
+            include:{
                     model: Benefit,
                     attributes: ['id', 'retirement', 'dental', 'health', 'paidTO'],
-                },
-                {
+
                     model: Role,
                     attributes: ['id', 'title', 'salary'],
-                },
-            ],
+                }
         });
 
         const user = userData.get({ plain: true });
