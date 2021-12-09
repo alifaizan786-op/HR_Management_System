@@ -7,10 +7,12 @@ router.get('/', withAuth, async (req, res) => {
     try {
         const userData = await Employee.findByPk(req.session.userId, {
             attributes: { exclude: ['password'] },
+            include: {model:Role}
+            // include:{model:Benefit}
         });
 
         const user = userData.get({ plain: true });
-
+        console.log(user)
         res.render('profile', {
             user,
             loggedIn: true
@@ -26,20 +28,17 @@ router.get('/allemp', withAuth, async (req, res) => {
     try {
         const userData = await Employee.findAll({ where: { branch_id: req.session.branchId } }, {
             attributes: { exclude: ['password'] },
-            include: [
-                {
+            include:{
                     model: Benefit,
                     attributes: ['id', 'retirement', 'dental', 'health', 'paidTO'],
-                },
-                {
+
                     model: Role,
                     attributes: ['id', 'title', 'salary'],
-                },
-            ],
+                }
         });
 
         const user = userData.get({ plain: true });
-
+       
         res.render('allemp', {
             user,
             loggedIn: true
@@ -114,14 +113,24 @@ router.get('/allemp/selectbranch', withAuth, async (req, res) => {
 // benefits page
 router.get('/benefits', withAuth, async (req, res) => {
     try {
-        const benefitsData = await Benefit.findByPk({ where: { id: req.session.userId } });
+        const userData = await Role.findOne({ where: { id: req.session.roleId } }, {
+            include: [
+                {
+                    model:Benefit
+                }
+            ]
+        });
 
-        const benefit = benefitsData.get({ plain: true });
+        const user = userData.get({ plain: true });
+
+        console.log(user)
 
         res.render('benefits', {
+            user,
             loggedIn: true
         });
     } catch (err) {
+        console.log(err)
         res.status(500).json(err)
     }
 });

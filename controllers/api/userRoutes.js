@@ -37,6 +37,7 @@ router.post('/login', async (req, res) => {
             req.session.userId = userData.id;
             req.session.userPrivilegeLevel = userData.privilege_Level;
             req.session.branchId = userData.branch_id;
+            req.session.roleId = userData.role_id;
             req.session.loggedIn = true;
 
 
