@@ -15,14 +15,14 @@
                   
               </tr>
             </thead>
-            {{#each Employees as |Employee|}}
+            {{#each users as |user|}}
             <tbody>
               <tr>
-                <td>{{Employee.id}}</td>
-                <td>{{Employee.first_name}}</td>
-                <td>{{Employee.last_name}}</td>
-                <td>{{Employee.branch_id}}</td>
-                <td>{{Employee.role_id}}</td>
+                <td>{{this.id}}</td>
+                <td>{{this.first_Name}}</td>
+                <td>{{this.last_Name}}</td>
+                <td>{{this.branch_id}}</td>
+                <td>{{this.role_id}}</td>
                 <td>3</td>
                 <td>$80,000</td>
                 <td>{{this.email}}</td>
@@ -32,6 +32,7 @@
                 </td>
               </tr>
               {{/each}}
+              </table>
 
               <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
