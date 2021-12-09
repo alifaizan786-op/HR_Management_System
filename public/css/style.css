@@ -28,7 +28,6 @@ header {
 }
 
 .mainDisplay {
-    flex: 2 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,9 +42,9 @@ aside {
     padding: 50px 10px;
 }
 
-.sideNav {
-    width: 100%;
-    font-family: 'Orbitron', sans-serif;
+#sideNavBar {
+    display: flex;
+    flex-direction: column;
 }
 
 .topNavDiv {
@@ -58,18 +57,21 @@ aside {
     list-style-type: none;
     display: inline-block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     padding: 5px 10px;
+    color: white;
 }
 
 .profilePageTitleDiv {
+    align-self:baseline;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .profilePageTitle {
     color: white;
-    font-size:xx-large;
+    font-size:large;
     margin: 0px 20px;
 }
 
@@ -78,6 +80,7 @@ aside {
     flex-wrap: wrap;
     padding: 10px;
     border: 2px white solid;
+    width: fit-content;
 }
 
 .profilePageInfo {
