@@ -8,6 +8,7 @@ router.get('/', withAuth, async (req, res) => {
         const userData = await Employee.findByPk(req.session.userId, {
             attributes: { exclude: ['password'] },
             include: {model:Role}
+            // include:{model:Benefit}
         });
 
         const user = userData.get({ plain: true });
@@ -27,12 +28,14 @@ router.get('/allemp', withAuth, async (req, res) => {
     try {
         const userData = await Employee.findAll({ where: { branch_id: req.session.branchId } }, {
             attributes: { exclude: ['password'] },
+
             include: [
                 {
                   model: Role,
                   attributes: ['title'],
                 },
               ],
+
         });
         // const users = userData.map((project) => project.get({ plain: true }));
         const users = userData.map((user)=> user.get({ plain:true }));
