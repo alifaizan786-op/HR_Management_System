@@ -115,14 +115,24 @@ router.get('/allemp/selectbranch', withAuth, async (req, res) => {
 // benefits page
 router.get('/benefits', withAuth, async (req, res) => {
     try {
-        const benefitsData = await Benefit.findByPk({ where: { id: req.session.userId } });
+        const userData = await Role.findOne({ where: { id: req.session.roleId } }, {
+            include: [
+                {
+                    model:Benefit
+                }
+            ]
+        });
 
-        const benefit = benefitsData.get({ plain: true });
+        const user = userData.get({ plain: true });
+
+        console.log(user)
 
         res.render('benefits', {
+            user,
             loggedIn: true
         });
     } catch (err) {
+        console.log(err)
         res.status(500).json(err)
     }
 });
