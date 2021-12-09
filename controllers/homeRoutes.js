@@ -25,19 +25,13 @@ router.get('/', withAuth, async (req, res) => {
 //this page will render all employee data and will be only accessible for CFO/CEO/HR/Branch Manager
 router.get('/allemp', withAuth, async (req, res) => {
     try {
-        const userData = await Employee.findAll({ where: { branch_id: req.session.branchId } }, {
+        const userData = await Employee.findAll({
+            where: { branch_id: req.session.branchId },
             attributes: { exclude: ['password'] },
-
-
-            include: [
-                {
-                  model: Role,
-                  attributes: ['title'],
-                },
-              ],
-
+            include: {model: Role},
         }); 
-
+        console.log(userData)
+        
         const users = userData.map((user)=> user.get({ plain:true }));
         console.log(users)
        
