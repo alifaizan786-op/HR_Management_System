@@ -13,18 +13,18 @@
     <title>HR Management System</title>
 </head>
 
-<body class="grey darken-2">
-    <header class="col l12 indigo darken-4">
+<body>
+    <header class="col l12">
         <nav class="">
-        <div class="topNavBar nav-wrapper indigo darken-4 topNavDiv">
+        <div class="topNavBar nav-wrapper topNavDiv">
             <img class="brand-logo" src="\images\dundermifflinlogo.png" alt="company banner"/>
-            <div id="date" class="dateTime topNavLinks">
-                Date & Time
+            <div class="topNavLinks">
+                {{dateFormat dateNow format='MM/DD/YYYY'}}
             </div>
             <div>
                 <!-- Conditionally render login or logout links -->
                 {{#if loggedIn}}
-                <a href="/">Profile</a>
+                <a class="topNavLinks" href="/">Profile</a>
                 <button class="grey darken-2 btn btn-primary" id="logout">Logout</button>
                 {{else}}
                 <a href="/login">Login</a>
@@ -35,7 +35,7 @@
     </header>
     <main class="container sideAndMain">
         {{#if loggedIn}}
-        <aside id="sideNavBar" class="indigo darken-4">
+        <aside id="sideNavBar">
             <a class="sideNavLinks" href="/benefits">Benefits</a>
             <a class="sideNavLinks" href="/timeOff">Request Time Off</a>
             <a class="sideNavLinks" href="/allemp">View All Employees</a>
@@ -46,11 +46,10 @@
 
         </aside>
         {{/if}}
-        <section class="mainDisplay indigo darken-4">
+        <section class="mainDisplay">
         {{{ body }}}
         </section>
   </main>
-  
   <script type="text/javascript" src="/JS/main.js"></script>
   <script type="text/javascript" src="/JS/logout.js"></script>
   <script type="text/javascript" src="/JS/materialize.js"></script>
@@ -93,3 +92,5 @@ $(document).ready(function(){
   });
     </script>
 
+</body>
+</html>
