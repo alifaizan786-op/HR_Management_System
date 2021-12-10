@@ -25,3 +25,13 @@ hb.registerHelper({
         return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
     }
 });
+
+hb.registerHelper("ifcon", function(conditional, options) {
+    if (conditional === 6) {
+        console.log(conditional)
+      return options.fn(this);
+    } else {
+        console.log(conditional)
+      return options.inverse(this);
+    }
+  });
