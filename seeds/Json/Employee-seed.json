@@ -130,5 +130,71 @@
         "role_id": 7,
         "branch_id": 3,
         "employeeStatus": 1
+    },
+    {
+        "id": 13,
+        "privilege_Level": 2,
+        "first_Name": "Josh",
+        "last_Name":"Porter" ,
+        "password": "0daa58e9-f807-43c8-9113-ac64050649dd",
+        "email": "josh.porter@dundermifflin.com",
+        "role_id": 3,
+        "branch_id": 2,
+        "employeeStatus": 1
+    },
+    {
+        "id": 14,
+        "privilege_Level": 1,
+        "first_Name": "Andy",
+        "last_Name":"Bernard",
+        "password":"39edefca-5c53-4940-980c-28ae1473e16a",
+        "email":"andy.bernard@dundermifflin.com",
+        "role_id": 1,
+        "branch_id":2,
+        "employeeStatus": 1
+    },
+    {
+        "id": 15,
+        "privilege_Level": 1,
+        "first_Name": "Karen",
+        "last_Name":"Filippelli",
+        "password":"7df4cca4-986e-4c7b-afff-424a34add300",
+        "email":"karen.filippelli@dundermifflin.com",
+        "role_id": 1,
+        "branch_id":2,
+        "employeeStatus": 1
+    },
+    {
+        "id": 16,
+        "privilege_Level": 1,
+        "first_Name": "Tony",
+        "last_Name":"Gardner",
+        "password":"86f9d2a0-eb68-462f-a2c7-4647845df18f",
+        "email":"tony.gardner@dundermifflin.com",
+        "role_id": 1,
+        "branch_id":2,
+        "employeeStatus":1 
+    },
+    {
+        "id": 17,
+        "privilege_Level": 1,
+        "first_Name": "Hannah",
+        "last_Name":"Smoterich-Barr",
+        "password":"76c189e3-8acb-4dd6-8a64-7e62664b163d",
+        "email":"hannah.smoterich-barr@dunndermifflin.com",
+        "role_id": 4,
+        "branch_id":2,
+        "employeeStatus":1 
+    },
+    {
+        "id": 18,
+        "privilege_Level": 1,
+        "first_Name": "Polly",
+        "last_Name":"Smith",
+        "password":"0024ade2-c351-4501-a514-93bb30339a75",
+        "email":"polly.smith@dunndermifflin.com",
+        "role_id": 3,
+        "branch_id":2,
+        "employeeStatus": 1
     }
 ]
