@@ -38,7 +38,7 @@
         <aside id="sideNavBar" class="indigo darken-4">
             <a class="sideNavLinks" href="/benefits">Benefits</a>
             <a class="sideNavLinks" href="/timeOff">Request Time Off</a>
-            <a class="sideNavLinks" href="/viewAllEmployees">View All Employees</a>
+            <a class="sideNavLinks" href="/allemp">View All Employees</a>
         {{!-- render HR Page / BM Page / Executive Page based on priviledge --}}
         {{#if loggedIn}}
             <a class="sideNavLinks" href="/HRProfile"></a>
@@ -56,3 +56,40 @@
   <script type="text/javascript" src="/JS/materialize.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+
+  <!--sidenav-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, options);
+});
+
+// Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+// var collapsibleElem = document.querySelector('.collapsible');
+// var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+</script>
+
+
+
+<!--Modal-->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+    </script>
+
