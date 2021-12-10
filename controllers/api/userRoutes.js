@@ -3,12 +3,26 @@ const { Employee, Role, Benefit, Time_off } = require('../../models');
 
 
 //Creating a post request to create employee, this will only be accessible by HR
-router.post('/', async (req, res) => {
+router.post('/newemp', async (req, res) => {
     try {
-        const userData = await Employee.create(req.body);
-
+        console.log(req.body.privilege_Level)
+        console.log(req.body.first_Name)
+        const userData = await Employee.create(
+            {
+                privilege_Level: req.body.privilege_Level,
+                first_Name: req.body.first_Name,
+                last_Name: req.body.last_Name,
+                password: req.body.password,
+                email: req.body.email,
+                role_id: req.body.role_id,
+                branch_id: req.body.branch_id,
+                employeeStatus: req.body.employeeStatus,
+            }
+        );
+            console.log(userData);
         res.status(200).json(userData);
     } catch (err) {
+        console.log(err)
         res.status(400).json(err)
     }
 })

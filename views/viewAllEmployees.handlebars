@@ -23,12 +23,12 @@
                 <td>{{this.last_Name}}</td>
                 <td>{{this.branch_id}}</td>
                 <td>{{this.role.title}}</td>
-                <td>{{this.role.benefit_id}}</td>
-                <td>${{this.role.salary}}</td>
+                <td>3</td>
+                <td>{{this.role.salary}}</td>
                 <td>{{this.email}}</td>
                 <td>
-                    <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
-                    <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
+                    <div><a href="button" type="button" class="btn blue btn-light btn-small"> <i class="material-icons">edit</i></a></
+                    <div><a href="button" type="button" class="btn blue btn-light btn-small"> <i class="material-icons">delete</i></a>
                 </td>
               </tr>
               {{/each}}
@@ -38,7 +38,7 @@
 <br>
 <br>
               <div class="container center-align">
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal">New Employee</a>
+      <a class="btn blue modal-trigger" href="#modal">New Employee</a>
 
   <!-- Modal Structure -->
   <div id="modal" class="modal">
@@ -60,24 +60,29 @@
             </div>
 
             <div class="row">
-              <div class="input-field col s6">
-                <input id="Branch" type="text" class="validate">
-                <label for="Branch">Branch</label>
+              {{!-- <div class="input-field col s6"> --}}
+                {{!-- <input id="branch" type="text" class="validate"> --}}
+                {{!-- <label for="Branch">Branch</label> --}}
+                 <div class="input-field col s6">
+    <select id="branch">
+      <option value="1">Scranton</option>
+      <option value="2">Sanford</option>
+    </select>
+    <label>Branch</label>
+  </div>
               </div>
                <div class="input-field col s6">
-                <input id="Role" type="text" class="validate">
-                <label for="Role">Role</label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="Benefits" type="text" class="validate">
-                <label for="Benefits">Benefits</label>
-              </div>
-               <div class="input-field col s6">
-                <input id="Salary" type="text" class="validate">
-                <label for="Salary">Salary</label>
+                {{!-- <input id="Role" type="text" class="validate"> --}}
+    <select id="role">
+      <option value="1">Sales</option>
+      <option value="2">Branch Manager</option>
+      <option value="3">Secretary</option>
+      <option value="4">Accountant</option>
+       <option value="5">Warehouse</option>
+      <option value="6">Human Resources</option>
+       <option value="7">Cheif Executive Officer</option>
+    </select>
+    <label>Role</label>
               </div>
             </div>
 
@@ -91,11 +96,26 @@
               <div class="input-field col s12">
                 <input id="email" type="email" class="validate">
                 <label for="email">Email</label>
+ <div class="row">
+              {{!-- <div class="input-field col s6"> --}}
+                {{!-- <input id="branch" type="text" class="validate"> --}}
+                {{!-- <label for="Branch">Branch</label> --}}
+                 <div class="input-field col s6">
+    <select id="privilege">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <label>Privelege</label>
+  </div>
+              </div>
+
               </div>
             </div>
           </form>
         </div>
-        <a href="button" type="button" class="btn blue btn-large center-align">Add New Employee</a>
+        <button type="button" id="newempform" class="btn blue btn-large center-align">Add New Employee</button>
     </div>
    
   </div>
@@ -103,23 +123,22 @@
   <br>
   <br>
   <br>
-
-              <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/newempform.js"></script>
     <!--Modal-->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
+    {{!-- var instances = M.Modal.init(elems, options); --}}
   });
-
   // Or with jQuery
-
   $(document).ready(function(){
     $('.modal').modal();
   });
+$(document).ready(function(){
+    $('select').formSelect();
+});
     </script>
-
 </body>
 </html>
