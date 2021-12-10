@@ -18,13 +18,13 @@
         <nav class="">
         <div class="topNavBar nav-wrapper topNavDiv">
             <img class="brand-logo" src="\images\dundermifflinlogo.png" alt="company banner"/>
-            <div id="date" class="dateTime topNavLinks">
-                Date / Time
+            <div class="topNavLinks">
+                {{dateFormat dateNow format='MM/DD/YYYY'}}
             </div>
             <div>
                 <!-- Conditionally render login or logout links -->
                 {{#if loggedIn}}
-                <a href="/">Profile</a>
+                <a class="topNavLinks" href="/">Profile</a>
                 <button class="grey darken-2 btn btn-primary" id="logout">Logout</button>
                 {{else}}
                 <a href="/login">Login</a>
@@ -37,12 +37,8 @@
         {{#if loggedIn}}
         <aside id="sideNavBar">
             <a class="sideNavLinks" href="/benefits">Benefits</a>
-            <a class="sideNavLinks" href="/timeOff">Request Time Off</a>
-        {{!-- render HR Page / BM Page / Executive Page based on priviledge --}}
-        {{!-- {{#ifCond v1 v2}}
-            <a class="sideNavLinks" href="/allemp">View All Employees</a>
-        {{/ifCond}} --}}
-
+            <a class="sideNavLinks" href="/timeOff">Time Off</a>
+            <a class="sideNavLinks" href="/allemp">Employees</a>
         </aside>
         {{/if}}
         <section class="mainDisplay">

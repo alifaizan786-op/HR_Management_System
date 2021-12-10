@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@621&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
 html {
     background-image: url("/images/paper-background.jpg");
@@ -14,7 +14,9 @@ header {
     padding: 1%;
     margin: 10px 10px;
     height: 150px;
-    background-image: radial-gradient(circle, #CBD2F1, #9BA6DA, #606DAB);
+    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 }
 
 .topNavBar {
@@ -22,11 +24,19 @@ header {
     justify-content: space-between;
     align-self: center;
     padding: 0% 5%;
-    background-image: radial-gradient(circle, #CBD2F1, #9BA6DA, #606DAB);
+    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+}
+
+.topNavLinks {
+    color: #3B3B3B;
 }
 
 .brand-logo {
-    flex: 1 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 23%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .sideAndMain {
@@ -39,36 +49,42 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Inter', sans-serif;
     width: 100%;
     margin: 10px 10px;
-    background-image: radial-gradient(circle, #CBD2F1, #9BA6DA, #606DAB);
+    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 }
 
 aside {
     margin: 10px 10px;
     padding: 50px 10px;
-    background-image: radial-gradient(circle, #CBD2F1, #9BA6DA, #606DAB);
+    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    border-radius: 10px;
 }
 
 #sideNavBar {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .topNavDiv {
     align-self: flex-start;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
 }
 
 .sideNavLinks {
     list-style-type: none;
     display: inline-block;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 15px;
-    padding: 5px 10px;
-    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    padding: 20px 10px;
+    color: #3B3B3B;
+    text-align: justify;
 }
 
 .profilePageTitleDiv {
@@ -79,7 +95,7 @@ aside {
 }
 
 .profilePageTitle {
-    color: white;
+    color: #3B3B3B;
     font-size:large;
     margin: 0px 20px;
 }
@@ -88,18 +104,18 @@ aside {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    border: 2px white solid;
+    border: 2px #3B3B3B solid;
     width: fit-content;
 }
 
 .profilePageInfo {
-    color: white;
+    color: #3B3B3B;
     font-size:x-large;
     margin: 0px 20px;
 }
 
 .requestTimeOffSection {
-    border: 2px white solid;
+    border: 2px #3B3B3B solid;
 }
 
 /* login page */
@@ -107,15 +123,18 @@ aside {
 .loginDiv {
     margin: 5%;
     align-self: center;
+    font-family: 'Inter', sans-serif;
 }
 
 .loginTitle {
-    color: white;
+    font-family: 'Inter', sans-serif;
+    color: #3B3B3B;
     font-size:xx-large;
 }
 
 .loginInput {
-    color: white;
+    font-family: 'Inter', sans-serif;
+    color: #3B3B3B;
     font-size:x-large;
 }
 
