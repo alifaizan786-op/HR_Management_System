@@ -23,12 +23,14 @@
                 <td>{{this.last_Name}}</td>
                 <td>{{this.branch_id}}</td>
                 <td>{{this.role.title}}</td>
-                <td>3</td>
-                <td>$80,000</td>
+                <td>{{this.role.benefit_id}}</td>
+                <td>${{this.role.salary}}</td>
                 <td>{{this.email}}</td>
                 <td>
+                  {{#if user.role_id '==' 6}}
                     <a href="button" type="button" class="btn btn-light btn-small">Edit</a>
                     <a href="button" type="button" class="btn btn-light btn-small">Delete</a>
+                    {{/if}}
                 </td>
               </tr>
               {{/each}}
