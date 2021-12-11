@@ -95,7 +95,7 @@ aside {
 }
 
 .profilePageTitle {
-    color: #3B3B3B;
+    color: black;
     font-size:large;
     margin: 0px 20px;
 }
@@ -104,18 +104,13 @@ aside {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    border: 2px #3B3B3B solid;
     width: fit-content;
 }
 
 .profilePageInfo {
-    color: #3B3B3B;
+    color: black;
     font-size:x-large;
     margin: 0px 20px;
-}
-
-.requestTimeOffSection {
-    border: 2px #3B3B3B solid;
 }
 
 /* login page */
