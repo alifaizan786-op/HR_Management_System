@@ -30,10 +30,8 @@ router.get('/allemp', withAuth, async (req, res) => {
             attributes: { exclude: ['password'] },
             include: {model: Role},
         }); 
-        console.log(userData)
         
         const users = userData.map((user)=> user.get({ plain:true }));
-        console.log(users)
        
         res.render('viewAllEmployees', {
             users,
