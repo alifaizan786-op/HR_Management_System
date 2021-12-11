@@ -52,8 +52,8 @@ header {
     font-family: 'Inter', sans-serif;
     width: 100%;
     margin: 10px 10px;
-    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     border-radius: 10px;
 }
 
@@ -67,8 +67,9 @@ aside {
 #sideNavBar {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* align-items:; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    height: 100vh;
 }
 
 .topNavDiv {
@@ -138,3 +139,10 @@ aside {
     font-size:x-large;
 }
 
+label {
+    color: black;
+    font-size: medium;
+}
+.container {
+    margin: 0%;
+}

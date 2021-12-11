@@ -1,17 +1,39 @@
 <div class="container">
-  <!-- Page Content goes here -->
-  <table class="striped responsive-table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Branch</th>
-        <th>Role</th>
-        <th>Benefits</th>
-        <th>Salary</th>
-        <th>Email</th>
-        <th>Action</th>
+        <!-- Page Content goes here -->
+        <table class="striped responsive-table">
+            <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Branch</th>
+                  <th>Role</th>
+                  <th>Benefits</th>
+                  <th>Salary</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                  
+              </tr>
+            </thead>
+            {{#each users as |user|}}
+            <tbody>
+              <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.first_Name}}</td>
+                <td>{{this.last_Name}}</td>
+                <td>{{this.branch_id}}</td>
+                <td>{{this.role.title}}</td>
+                <td>3</td>
+                <td>{{this.role.salary}}</td>
+                <td>{{this.email}}</td>
+                <td>
+                    <div><a href="button" type="button" class="btn blue btn-light btn-small"> <i class="material-icons">edit</i></a></
+                    <div><a href="button" type="button" class="btn blue btn-light btn-small"> <i class="material-icons">delete</i></a>
+                </td>
+              </tr>
+              {{/each}}
+              </table>
+
 
       </tr>
     </thead>
@@ -87,12 +109,32 @@
                   <label>Role</label>
                 </div>
               </div>
+            </div>
+            <div class="input-field col s6">
+    <select id="privilege">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <label>Privelege</label>
+  </div>
 
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Password</label>
-                </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+ <div class="row">
+              {{!-- <div class="input-field col s6"> --}}
+                {{!-- <input id="branch" type="text" class="validate"> --}}
+                {{!-- <label for="Branch">Branch</label> --}}
+                 
               </div>
               <div class="row">
                 <div class="input-field col s12">
