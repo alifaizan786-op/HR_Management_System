@@ -8,6 +8,7 @@
         "email": "Michael.scott@dundermifflin.com",
         "role_id": 2,
         "branch_id": 1,
+        "remainingPTO": 100000,
         "employeeStatus": 1
     },
     {
@@ -19,6 +20,7 @@
         "email": "jim.halpert@dundermifflin.com",
         "role_id": 1,
         "branch_id": 1,
+        "remainingPTO": 10,
         "employeeStatus": 1
     },
     {
@@ -30,6 +32,7 @@
         "email": "pam.beesly@dundermifflin.com",
         "role_id": 3,
         "branch_id": 1,
+        "remainingPTO": 10,
         "employeeStatus": 1
     },
     {
@@ -41,6 +44,7 @@
         "email": "dwight.schrute@dundermifflin.com",
         "role_id": 1,
         "branch_id": 1,
+        "remainingPTO": 1000,
         "employeeStatus": 1
     },
     {
@@ -52,6 +56,7 @@
         "email": "stanley.hudson@dundermifflin.com",
         "role_id": 1,
         "branch_id": 1,
+        "remainingPTO": 180,
         "employeeStatus": 1
     },
     {
@@ -63,6 +68,7 @@
         "email": "phyllis.lapin@dundermifflin.com",
         "role_id": 1,
         "branch_id": 1,
+        "remainingPTO": 130,
         "employeeStatus": 1
     },
     {
@@ -74,6 +80,7 @@
         "email": "angela.martin@dundermifflin.com",
         "role_id": 1,
         "branch_id": 1,
+        "remainingPTO": 150,
         "employeeStatus": 1
     },
     {
@@ -85,6 +92,7 @@
         "email": "oscar.gutierrez@dundermifflin.com",
         "role_id": 4,
         "branch_id": 1,
+        "remainingPTO": 40,
         "employeeStatus": 1
     },
     {
@@ -96,6 +104,7 @@
         "email": "kevin.malone@dundermifflin.com",
         "role_id": 4,
         "branch_id": 1,
+        "remainingPTO": 10,
         "employeeStatus": 1
     },
     {
@@ -107,6 +116,7 @@
         "email": "toby.flenderson@dundermifflin.com",
         "role_id": 6,
         "branch_id": 1,
+        "remainingPTO": 50,
         "employeeStatus": 1
     },
     {
@@ -118,6 +128,7 @@
         "email": "darryl.philibin@dundermifflin.com",
         "role_id": 5,
         "branch_id": 1,
+        "remainingPTO": 150,
         "employeeStatus": 1
     },
     {
@@ -129,6 +140,7 @@
         "email": "robert.california@dundermifflin.com",
         "role_id": 7,
         "branch_id": 3,
+        "remainingPTO": 15000,
         "employeeStatus": 1
     },
     {
@@ -140,6 +152,7 @@
         "email": "josh.porter@dundermifflin.com",
         "role_id": 2,
         "branch_id": 2,
+        "remainingPTO": 300,
         "employeeStatus": 1
     },
     {
@@ -151,6 +164,7 @@
         "email":"andy.bernard@dundermifflin.com",
         "role_id": 1,
         "branch_id":2,
+        "remainingPTO": 150,
         "employeeStatus": 1
     },
     {
@@ -162,6 +176,7 @@
         "email":"karen.filippelli@dundermifflin.com",
         "role_id": 1,
         "branch_id":2,
+        "remainingPTO": 100,
         "employeeStatus": 1
     },
     {
@@ -173,6 +188,7 @@
         "email":"tony.gardner@dundermifflin.com",
         "role_id": 1,
         "branch_id":2,
+        "remainingPTO": 10,
         "employeeStatus":1 
     },
     {
@@ -184,6 +200,7 @@
         "email":"hannah.smoterich-barr@dunndermifflin.com",
         "role_id": 4,
         "branch_id":2,
+        "remainingPTO": 30,
         "employeeStatus":1 
     },
     {
@@ -195,6 +212,7 @@
         "email":"polly.smith@dunndermifflin.com",
         "role_id": 3,
         "branch_id":2,
+        "remainingPTO": 70,
         "employeeStatus": 1
     }
 ]

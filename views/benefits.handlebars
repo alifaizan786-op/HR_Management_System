@@ -1,17 +1,115 @@
-<div class="timeOff">
-    <h1 class="mainDisplayTitle">Benefits</h1>
-    <ul>
-        <li>
-            Retirement Plan: {{user.benefit.retirement}}
-        </li>
-        <li>
-            Dental Plan: {{user.benefit.dental}}
-        </li>
-        <li>
-            Health Plan: {{user.benefit.health}}
-        </li>
-        <li>
-            Yearly Hours of Paid Time-Off: {{user.benefit.paidTO}}
-        </li>
-    </ul>
+<div class="benefits">
+    <h1 class="benefitsTitle">Benefits</h1>
+            {{#ifCond  privilage.role.id 3 }}
+            <ul>
+                <li>
+                    <a class="benefitslinks" href="https://www.vanguard.com/pdf/s578.pdf" alt="Basic Portfolio PDF">Basic Retirement Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.metlife.com/content/dam/metlifecom/us/homepage/safeguard/afge/MET185_DentalHMOPlan.pdf" alt="Basic Dental PDF"> Basic Dental Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.naic.org/documents/committees_b_consumer_information_hhs_dol_submission_1107_soc_populated.pdf" alt="Basic Health Insurance PDF"> Basic Health Insurance</a>
+                </li>
+                <li id="benefitslinks">
+                    Paid Time-Off: {{user.benefit.paidTO}} Hours
+                </li>
+            </ul>
+            {{/ifCond}}
+            {{#ifCond  privilage.role.id 5 }}
+            <ul>
+                <li>
+                    <a class="benefitslinks" href="https://www.vanguard.com/pdf/s578.pdf" alt="Basic Portfolio PDF">Basic Retirement Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.metlife.com/content/dam/metlifecom/us/homepage/safeguard/afge/MET185_DentalHMOPlan.pdf" alt="Basic Dental PDF"> Basic Dental Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.naic.org/documents/committees_b_consumer_information_hhs_dol_submission_1107_soc_populated.pdf" alt="Basic Health Insurance PDF"> Basic Health Insurance</a>
+                </li>
+                <li id="benefitslinks">
+                    Paid Time-Off: {{user.benefit.paidTO}} Hours
+                </li>
+            </ul>
+            {{/ifCond}}
+            {{#ifCond  privilage.role.id 1 }}
+            <ul>
+                <li>
+                    <a class="benefitslinks" href="https://www.vanguard.com/pdf/s578.pdf" alt="Basic Portfolio PDF">Premium Retirement Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.metlife.com/content/dam/metlifecom/us/homepage/safeguard/afge/MET185_DentalHMOPlan.pdf" alt="Basic Dental PDF"> Premium Dental Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.naic.org/documents/committees_b_consumer_information_hhs_dol_submission_1107_soc_populated.pdf" alt="Basic Health Insurance PDF"> Premium Health Insurance</a>
+                </li>
+                <li id="benefitslinks">
+                    Paid Time-Off: {{user.benefit.paidTO}} Hours
+                </li>
+            </ul>
+            {{/ifCond}}
+            {{#ifCond  privilage.role.id 4 }}
+            <ul>
+                <li>
+                    <a class="benefitslinks" href="https://www.vanguard.com/pdf/s578.pdf" alt="Basic Portfolio PDF">Premium Retirement Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.metlife.com/content/dam/metlifecom/us/homepage/safeguard/afge/MET185_DentalHMOPlan.pdf" alt="Basic Dental PDF"> Premium Dental Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.naic.org/documents/committees_b_consumer_information_hhs_dol_submission_1107_soc_populated.pdf" alt="Basic Health Insurance PDF"> Premium Health Insurance</a>
+                </li>
+                <li id="benefitslinks">
+                    Paid Time-Off: {{user.benefit.paidTO}} Hours
+                </li>
+            </ul>
+            {{/ifCond}}
+            {{#ifCond  privilage.role.id 2 }}
+            <ul>
+                <li>
+                    <a class="benefitslinks" href="https://www.vanguard.com/pdf/s578.pdf" alt="Basic Portfolio PDF">Platinum Retirement Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.metlife.com/content/dam/metlifecom/us/homepage/safeguard/afge/MET185_DentalHMOPlan.pdf" alt="Basic Dental PDF"> Platinum Dental Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.naic.org/documents/committees_b_consumer_information_hhs_dol_submission_1107_soc_populated.pdf" alt="Basic Health Insurance PDF"> Platinum Health Insurance</a>
+                </li>
+                <li id="benefitslinks">
+                    Paid Time-Off: {{user.benefit.paidTO}} Hours
+                </li>
+            </ul>
+            {{/ifCond}}
+            {{#ifCond  privilage.role.id 6 }}
+            <ul>
+                <li>
+                    <a class="benefitslinks" href="https://www.vanguard.com/pdf/s578.pdf" alt="Basic Portfolio PDF">Platinum Retirement Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.metlife.com/content/dam/metlifecom/us/homepage/safeguard/afge/MET185_DentalHMOPlan.pdf" alt="Basic Dental PDF"> Platinum Dental Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.naic.org/documents/committees_b_consumer_information_hhs_dol_submission_1107_soc_populated.pdf" alt="Basic Health Insurance PDF"> Platinum Health Insurance</a>
+                </li>
+                <li id="benefitslinks">
+                    Paid Time-Off: {{user.benefit.paidTO}} Hours
+                </li>
+            </ul
+            {{/ifCond}}
+            {{#ifCond  privilage.role.id 7 }}
+            <ul>
+                <li>
+                    <a class="benefitslinks" href="https://www.vanguard.com/pdf/s578.pdf" alt="Basic Portfolio PDF">Diamond Retirement Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.metlife.com/content/dam/metlifecom/us/homepage/safeguard/afge/MET185_DentalHMOPlan.pdf" alt="Basic Dental PDF"> Diamond Dental Plan</a>
+                </li>
+                <li>
+                    <a class="benefitslinks" href="https://www.naic.org/documents/committees_b_consumer_information_hhs_dol_submission_1107_soc_populated.pdf" alt="Basic Health Insurance PDF"> Diamond Health Insurance</a>
+                </li>
+                <li id="benefitslinks">
+                    Paid Time-Off: {{user.benefit.paidTO}} Hours
+                </li>
+            </ul
+            {{/ifCond}}
 </div>
