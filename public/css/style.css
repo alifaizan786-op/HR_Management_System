@@ -28,7 +28,7 @@ header {
 }
 
 .topNavLinks {
-    color: #3B3B3B;
+    color: black;
 }
 
 .brand-logo {
@@ -47,14 +47,20 @@ header {
 .mainDisplay {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-family: 'Inter', sans-serif;
-    width: 100%;
     margin: 10px 10px;
-    /* background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    width: 100%;
+    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    padding: 5% 0%;
+}
+
+.benefitsTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 35px;
 }
 
 aside {
@@ -67,8 +73,7 @@ aside {
 #sideNavBar {
     display: flex;
     flex-direction: column;
-    /* align-items:; */
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 100vh;
 }
 
@@ -84,8 +89,34 @@ aside {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     padding: 20px 10px;
-    color: #3B3B3B;
+    color: black;
     text-align: justify;
+}
+
+#benefitslinks {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.benefitslinks {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.benefitslinks:hover {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    color: black;
+    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: .5s;
 }
 
 .profilePageTitleDiv {
@@ -97,7 +128,7 @@ aside {
 
 .profilePageTitle {
     color: black;
-    font-size:large;
+    font-size:xx-large;
     margin: 0px 20px;
 }
 
@@ -111,7 +142,7 @@ aside {
 .profilePageInfo {
     color: black;
     font-size:x-large;
-    margin: 0px 20px;
+    margin: 7% 0% 0% 5%;
 }
 
 /* login page */
@@ -124,13 +155,13 @@ aside {
 
 .loginTitle {
     font-family: 'Inter', sans-serif;
-    color: #3B3B3B;
+    color: black;
     font-size:xx-large;
 }
 
 .loginInput {
     font-family: 'Inter', sans-serif;
-    color: #3B3B3B;
+    color: black;
     font-size:x-large;
 }
 
@@ -140,4 +171,34 @@ label {
 }
 .container {
     margin: 0%;
+}
+
+.benefits {
+    text-align: center;
+}
+
+.requestForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 7%;
+}
+
+.approveTimeOffTitle {
+    margin-top: 10%;
+}
+
+.approveInfo {
+        font-family: 'Inter', sans-serif;
+        font-size: 25px;
+        color: black;
+        padding: 10px;
+}
+
+.approveBtn {
+    margin: 15px;
+}
+
+.denyBtn {
+    margin: 15px;
 }

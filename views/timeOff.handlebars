@@ -1,15 +1,32 @@
 <h2 class="requestTimeOffSection">Request Time Off</h2>
-<div class="form-group profilePageInfo">
+<form class="form timeOff-form">
+<div class="form-group profilePageInfo requestForm">
     <label for="startTimeoffDate" class="sideNavLinks">Select Start Date:</label>
     <input class="form-input sideNavLinks" type="date" id="startTimeoffDate" />
 </div>
-<div class="form-group profilePageInfo" class="sideNavLinks">
+<div class="form-group profilePageInfo requestForm">
     <label for="startTimeoffDate" class="sideNavLinks">Select End Date:</label>
     <input class="form-date sideNavLinks" type="date" id="endTimeoffDate" />
 </div>
-<div class="form-group profilePageInfo">
-    <label for="pto" class="sideNavLinks">Enter total hours of requested Paid Time Off</label>
-    <input class="form-select sideNavLinks" type="select" id="hoursUsed" />
+<div class="form-group profilePageInfo requestForm" >
+    <label for="pto" class="">Total hours of requested Paid Time Off</label>
+    <input class="form-select hoursReque" type="select" id="hoursUsed" />
 </div>
-<button name="" type="submit">Submit to Michael Scott</button>
-<button name="" type="submit">Submit to Josh Porter</button>
+{{#ifCond  privilage.branch_id 1}}
+    <button class="grey darken-2 btn btn-primary" type="submit">Submit to Michael Scott</button>
+{{/ifCond}}
+{{#ifCond  privilage.branch_id 2}}
+    <button class="grey darken-2 btn btn-primary" type="submit">Submit to Josh Porter</button>
+{{/ifCond}}
+</form>
+{{#ifCond  privilage.privilege_Level 2}}
+    {{> timeoffappr}}
+{{/ifCond}}
+{{#ifCond  privilage.privilege_Level 3}}
+    {{> timeoffappr}}
+{{/ifCond}}
+{{#ifCond  privilage.privilege_Level 4}}
+    {{> timeoffappr}}
+{{/ifCond}}
+
+<script src="/JS/timeOff.js"></script>

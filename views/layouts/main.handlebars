@@ -19,7 +19,7 @@
         <div class="topNavBar nav-wrapper topNavDiv">
             <img class="brand-logo" src="\images\dundermifflinlogo.png" alt="company banner"/>
             <div class="topNavLinks">
-                {{dateFormat dateNow format='MM/DD/YYYY'}}
+                {{dateFormat dateNow format='MMMM Do, YYYY'}}
             </div>
             <div>
                 <a class="topNavLinks" href="/">Profile</a>
@@ -35,12 +35,9 @@
         <aside id="sideNavBar">
             <a class="sideNavLinks" href="/benefits">Benefits</a>
             <a class="sideNavLinks" href="/timeOff">Time Off</a>
-            <a class="sideNavLinks" href="/timeoffappr">Approve Time off</a>
-            <a class="sideNavLinks" href="/allemp">Employees</a>
-            <a class="sideNavLinks" href="/HRProfile">HR Profile</a>
         {{!-- render HR Page / BM Page / Executive Page based on priviledge --}}
         {{#ifCond  privilage.privilege_Level 4}}
-            <a class="sideNavLinks" href="/HRProfile">HR Profile</a>
+            <a class="sideNavLinks" href="/allemp">Employees</a>
         {{/ifCond}}
 
         </aside>

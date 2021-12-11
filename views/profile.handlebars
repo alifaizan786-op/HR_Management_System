@@ -1,12 +1,17 @@
 <section class="profileSection">
-    <div>
-        <ul class="profilePageTitleDiv">
-            <li class="profilePageTitle">Name: {{user.first_Name}} {{user.last_Name}}</li>
-            <li class="profilePageTitle">Role: {{user.role.title}}</li>
-            <li class="profilePageTitle">Salary: {{user.role.salary}}</li>
-            <li class="profilePageTitle">Email: {{user.email}}</li>
-        </ul>
-    </div>  
+    <h2 class="profilePageTitle">Welcome Back {{user.first_Name}} {{user.last_Name}}!</h2>
+    <ul class="profilePageTitleDiv">
+        {{#ifCond  privilage.branch_id 1 }}
+        <li class="profilePageInfo">Dunder Mifflin, Inc - Scranton Branch</li>
+        {{/ifCond}}
+        {{#ifCond  privilage.branch_id 2 }}
+        <li class="profilePageInfo">Dunder Mifflin, Inc - Stamford Branch</li>
+        {{/ifCond}}
+        <li class="profilePageInfo">Role: {{user.role.title}}</li>
+        <li class="profilePageInfo">Salary: ${{user.role.salary}}</li>
+        <li class="profilePageInfo">Email: {{user.email}}</li>
+        <li class="profilePageInfo">Hours of PTO: 50{{user.remainingPTO}} hours</li>
+    </ul>
 </section>
 
 <script type="text/javascript" src="/JS/materialize.js"></script>
