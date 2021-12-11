@@ -109,13 +109,11 @@ router.get('/allemp/selectbranch', withAuth, async (req, res) => {
 // benefits page
 router.get('/benefits', withAuth, async (req, res) => {
     try {
-        const userData = await Role.findOne({ where: { id: req.session.roleId } }, {
-            include: [
-                {
-                    model:Benefit
-                }
-            ]
+        const userData = await Role.findByPk(req.session.roleId , {
+            include: [ {model:Benefit} ]
         });
+
+        
 
         const user = userData.get({ plain: true });
 
