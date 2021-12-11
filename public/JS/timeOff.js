@@ -3,6 +3,7 @@ const requestTimeOffHandler = async (event) => {
   
   // Collect values from the time off form
   const startDate = document.querySelector('#startTimeoffDate').value.trim();
+
   console.log(startDate)
   const endDate = document.querySelector('#endTimeoffDate').value.trim();
   console.log(endDate)
@@ -12,10 +13,12 @@ const requestTimeOffHandler = async (event) => {
   if (startDate && endDate && hoursUsed) {
     // Send a POST request to the API endpoint
     const response = await fetch('/api/timeOff/', {
+
       method: 'POST',
       body: JSON.stringify({ startDate, endDate, hoursUsed }),
       headers: { 'Content-Type': 'application/json' },
     });
+
     if (response.ok) {
       console.log('successful');
       // If successful, redirect the browser to the profile page
@@ -30,4 +33,5 @@ const requestTimeOffHandler = async (event) => {
 document
   .querySelector('.timeOff-form')
   .addEventListener('submit', requestTimeOffHandler);
+
     

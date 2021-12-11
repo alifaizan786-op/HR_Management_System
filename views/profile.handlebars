@@ -1,4 +1,5 @@
 <section class="profileSection">
+
     <h2 class="profilePageTitle">Welcome Back {{user.first_Name}} {{user.last_Name}}!</h2>
     <ul class="profilePageTitleDiv">
         {{#ifCond  privilage.branch_id 1 }}
@@ -12,6 +13,7 @@
         <li class="profilePageInfo">Email: {{user.email}}</li>
         <li class="profilePageInfo">Hours of PTO: 50{{user.remainingPTO}} hours</li>
     </ul>
+
 </section>
 
 <script type="text/javascript" src="/JS/materialize.js"></script>

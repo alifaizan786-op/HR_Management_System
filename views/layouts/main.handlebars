@@ -35,9 +35,11 @@
         <aside id="sideNavBar">
             <a class="sideNavLinks" href="/benefits">Benefits</a>
             <a class="sideNavLinks" href="/timeOff">Time Off</a>
+
         {{!-- render HR Page / BM Page / Executive Page based on priviledge --}}
         {{#ifCond  privilage.privilege_Level 4}}
             <a class="sideNavLinks" href="/allemp">Employees</a>
+
         {{/ifCond}}
 
         </aside>

@@ -32,16 +32,9 @@ router.get('/allemp', withAuth, async (req, res) => {
             attributes: { exclude: ['password'] },
             include: {model: Role},
         }); 
-        console.log(userData)
         
         const users = userData.map((user)=> user.get({ plain:true }));
-        console.log(users)
-        const privilageData = await Employee.findByPk(req.session.userId, {
-            attributes: { exclude: ['password'] },
-            include: {model:Role}
-        });
 
-        const privilage = privilageData.get({ plain: true });
         res.render('viewAllEmployees', {
             users,
             privilage,

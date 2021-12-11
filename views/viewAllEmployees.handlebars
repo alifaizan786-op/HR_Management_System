@@ -23,39 +23,49 @@
                 <td>{{this.last_Name}}</td>
                 <td>{{this.branch_id}}</td>
                 <td>{{this.role.title}}</td>
-                <td>3</td>
+                <td>{{this.role.benefit_id}}</td>
                 <td>{{this.role.salary}}</td>
                 <td>{{this.email}}</td>
                 <td>
-                    <div><a href="button" type="button" class="btn blue btn-light btn-small"> <i class="material-icons">edit</i></a></
-                    <div><a href="button" type="button" class="btn blue btn-light btn-small"> <i class="material-icons">delete</i></a>
+                    <button type="button" class="btn blue btn-light btn-small"><i class="material-icons">edit</i></button>
                 </td>
               </tr>
               {{/each}}
               </table>
 
+<br>
+<br>
+<br>
+              <div class="container center-align">
+      <a class="btn blue modal-trigger" href="#newempmodal">New Employee</a>
 
-      </tr>
-    </thead>
-    {{#each users as |user|}}
-    <tbody>
-      <tr>
-        <td>{{this.id}}</td>
-        <td>{{this.first_Name}}</td>
-        <td>{{this.last_Name}}</td>
-        <td>{{this.branch_id}}</td>
-        <td>{{this.role.title}}</td>
-        <td>3</td>
-        <td>${{this.role.salary}}</td>
-        <td>{{this.email}}</td>
-        <td>
-          <a href="button" type="button" class="btn blue btn-light btn-small"> <i
-                class="material-icons">edit</i></a><a href="button" type="button"
-              class="btn blue btn-light btn-small"> <i class="material-icons">delete</i></a>
-        </td>
-      </tr>
-      {{/each}}
-  </table>
+
+  <button data-target="modal1" class="btn blue modal-trigger">Delete Employee  </button>
+      <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <h4>Delete Employee</h4>
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="text" id="empid" >
+            <label for="autocomplete-input">Employee id</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" id="deleteemployee" class="btn blue btn-large center-align">deleteemployee</button>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+  <div id="newempmodal" class="modal">
+    <div class="modal-content">
+      <h4>New Employee</h4>
+      <div class="container center-align">
+        <div class="row">
+          <form class="col s12">
+
 
   <br>
   <br>
@@ -110,15 +120,31 @@
                 </div>
               </div>
             </div>
-            <div class="input-field col s6">
-    <select id="privilege">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-    <label>Privelege</label>
-  </div>
+
+
+            <div class="row">
+                 <div class="input-field col s6">
+                      <select id="branch">
+                        <option value="1">Scranton</option>
+                        <option value="2">Stamford</option>
+                      </select>
+                      <label>Branch</label>
+                    </div>
+              </div>
+               <div class="input-field col s6">
+                <select id="role">
+                  <option value="1">Sales</option>
+                  <option value="2">Branch Manager</option>
+                  <option value="3">Secretary</option>
+                  <option value="4">Accountant</option>
+                  <option value="5">Warehouse</option>
+                  <option value="6">Human Resources</option>
+                  <option value="7">Cheif Executive Officer</option>
+                </select>
+                <label>Role</label>
+              </div>
+            </div>
+
 
             <div class="row">
               <div class="input-field col s12">
@@ -130,11 +156,18 @@
               <div class="input-field col s12">
                 <input id="email" type="email" class="validate">
                 <label for="email">Email</label>
- <div class="row">
-              {{!-- <div class="input-field col s6"> --}}
-                {{!-- <input id="branch" type="text" class="validate"> --}}
-                {{!-- <label for="Branch">Branch</label> --}}
-                 
+
+                  <div class="row">
+                 <div class="input-field col s6">
+                  <select id="privilege">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <label>Privelege</label>
+                </div>
+
               </div>
               <div class="row">
                 <div class="input-field col s12">
@@ -165,12 +198,19 @@
 
       </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/js/newempform.js"></script>
+
+    
+   
+  </div>
+  </div>
+  <br>
+  <br>
+  <br>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/newempform.js"></script>
+<script src="/js/editdelete.js"></script>
+
     <!--Modal-->
     <script>
       document.addEventListener('DOMContentLoaded', function () {

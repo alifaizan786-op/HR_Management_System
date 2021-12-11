@@ -128,7 +128,9 @@ aside {
 
 .profilePageTitle {
     color: black;
+
     font-size:xx-large;
+
     margin: 0px 20px;
 }
 
@@ -142,7 +144,9 @@ aside {
 .profilePageInfo {
     color: black;
     font-size:x-large;
+
     margin: 7% 0% 0% 5%;
+
 }
 
 /* login page */
