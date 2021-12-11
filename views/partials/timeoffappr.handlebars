@@ -1,5 +1,5 @@
 <h2 class="approveTimeOffTitle">Approve Time Off</h2>
-<div class="form-group">
+{{!-- <div class="form-group">
     <label for="startTimeoffDate" class="approveInfo">Start Date:</label>
 </div>
 <div class="form-group approveInfo">
@@ -7,6 +7,29 @@
 </div>
 <div class="form-group approveInfo">
     <label for="pto" class="approveInfo">Hours of Requested Paid Time Off: </label>
-</div>
-<button class="grey darken-2 btn btn-primary approveBtn" type="submit">Approve</button>
-<button class="grey darken-2 btn btn-primary denyBrn" type="submit">Deny</button>
+</div> --}}
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Hours Off</th>
+    <th>Approve / Deny</th>
+  </tr>
+  <tr>
+    <td>Michael Scott</td>
+    <td>Dec 15th, 2021</td>
+    <td>Dec 31st, 2021</td>
+    <td>120</td>
+    <td><button class="grey darken-2 btn btn-primary approveBtn" type="submit">Approve</button>
+<button class="grey darken-2 btn btn-primary denyBrn" type="submit">Deny</button></td>
+  </tr>
+  <tr>
+    <td>Jim Halpert</td>
+    <td>Jan 1st, 2022</td>
+    <td>Jan 6th, 2022</td>
+    <td>40</td>
+    <td><button class="grey darken-2 btn btn-primary approveBtn" type="submit">Approve</button>
+<button class="grey darken-2 btn btn-primary denyBrn" type="submit">Deny</button></td>
+  </tr>
+</table>
