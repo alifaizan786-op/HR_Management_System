@@ -23,7 +23,9 @@
             </div>
             <div>
                 <a class="topNavLinks" href="/">Profile</a>
+                {{#if loggedIn}}
                 <button class="grey darken-2 btn btn-primary" id="logout">Logout</button>
+                {{/if}}
             </div>
         </div>
         </nav>
@@ -37,16 +39,9 @@
             <a class="sideNavLinks" href="/allemp">Employees</a>
             <a class="sideNavLinks" href="/HRProfile">HR Profile</a>
         {{!-- render HR Page / BM Page / Executive Page based on priviledge --}}
-<<<<<<< HEAD
         {{#ifCond  privilage.role.id 6}}
             <a class="sideNavLinks" href="/HRProfile">HR Profile</a>
         {{/ifCond}}
-=======
-        {{#if (or 
-                (eq privilege_Level '4'))}}
-            
-        {{/if}}
->>>>>>> timeoff
 
         </aside>
         {{/if}}
