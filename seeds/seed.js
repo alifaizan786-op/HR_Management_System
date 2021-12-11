@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { Employee, Role, Benefit } = require('../models');
+const { Employee, Role, Benefit, Time_off } = require('../models');
 const RoleData = require("./Json/Roles-seed.json");
 const EmployeeData = require('./Json/Employee-seed.json');
 const BenefitsData = require("./Json/Benefits-seed.json");
@@ -10,6 +10,11 @@ const seedsDatabase = async () => {
     await sequelize.sync({ force: true });
     await sequelize.query('SET FOREIGN_KEY_CHECKS=1');
 
+    await Benefit.bulkCreate(BenefitsData, {
+        individualHooks: true,
+        returning: true,
+    });
+    
     await Role.bulkCreate(RoleData, {
         individualHooks: true,
         returning: true,
@@ -20,10 +25,7 @@ const seedsDatabase = async () => {
         returning: true,
     });
 
-    await Benefit.bulkCreate(BenefitsData, {
-        individualHooks: true,
-        returning: true,
-    });
+    await Time_off.create();
     process.exit(0);
 }
 
