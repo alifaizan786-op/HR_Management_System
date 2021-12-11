@@ -21,9 +21,7 @@ header {
 
 .topNavBar {
     display: flex;
-    justify-content: space-between;
-    align-self: center;
-    padding: 0% 5%;
+    justify-content:space-around;
     background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
 }
 
@@ -36,6 +34,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     width: 23%;
+    max-width: 224px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -201,4 +200,8 @@ label {
 
 .denyBtn {
     margin: 15px;
+}
+
+.date {
+    margin-right: 25%;
 }
