@@ -14,7 +14,7 @@ Employee.belongsTo(Role, {
     allowNull: false
 });
 
-Benefit.hasOne(Role, {
+Benefit.hasMany(Role, {
     foreignKey: "benefit_id",
     allowNull: false
 });
@@ -24,5 +24,14 @@ Role.belongsTo(Benefit, {
     allowNull: false
 });
 
+Employee.hasMany(Time_off,{
+    foreignKey: "emp_id",
+    allowNull:true
+});
+
+Time_off.belongsTo(Employee,{
+    foreignKey:"emp_id",
+    allowNull:true
+});
 
 module.exports = { Employee, Role, Benefit, Time_off }
