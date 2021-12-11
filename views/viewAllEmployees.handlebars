@@ -98,7 +98,7 @@
                   {{!-- <input id="branch" type="text" class="validate"> --}}
                   {{!-- <label for="Branch">Branch</label> --}}
                   <div class="input-field col s6">
-                    <select id="branch">
+                    <select class="branch">
                       <option value="1">Scranton</option>
                       <option value="2">Sanford</option>
                     </select>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="input-field col s6">
                   {{!-- <input id="Role" type="text" class="validate"> --}}
-                  <select id="role">
+                  <select class="role">
                     <option value="1">Sales</option>
                     <option value="2">Branch Manager</option>
                     <option value="3">Secretary</option>
@@ -124,7 +124,7 @@
 
             <div class="row">
                  <div class="input-field col s6">
-                      <select id="branch">
+                      <select class="branch">
                         <option value="1">Scranton</option>
                         <option value="2">Stamford</option>
                       </select>
@@ -132,7 +132,7 @@
                     </div>
               </div>
                <div class="input-field col s6">
-                <select id="role">
+                <select class="role">
                   <option value="1">Sales</option>
                   <option value="2">Branch Manager</option>
                   <option value="3">Secretary</option>
@@ -148,18 +148,18 @@
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
+                <input class="password" type="password" class="validate">
                 <label for="password">Password</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
+                <input class="email" type="email" class="validate">
                 <label for="email">Email</label>
 
                   <div class="row">
                  <div class="input-field col s6">
-                  <select id="privilege">
+                  <select class="privilege">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -178,7 +178,7 @@
                       {{!-- <input id="branch" type="text" class="validate"> --}}
                       {{!-- <label for="Branch">Branch</label> --}}
                       <div class="input-field col s6">
-                        <select id="privilege">
+                        <select class="privilege">
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -215,7 +215,7 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.modal');
-        { { !-- var instances = M.Modal.init(elems, options); --} }
+        var instances = M.Modal.init(elems, options);
       });
       // Or with jQuery
       $(document).ready(function () {
