@@ -11,9 +11,11 @@ router.get('/', withAuth, async (req, res) => {
         });
 
         const user = userData.get({ plain: true });
+        const privilage = user
         console.log(user)
         res.render('profile', {
             user,
+            privilage,
             loggedIn: true
         })
 
@@ -34,9 +36,15 @@ router.get('/allemp', withAuth, async (req, res) => {
         
         const users = userData.map((user)=> user.get({ plain:true }));
         console.log(users)
-       
+        const privilageData = await Employee.findByPk(req.session.userId, {
+            attributes: { exclude: ['password'] },
+            include: {model:Role}
+        });
+
+        const privilage = privilageData.get({ plain: true });
         res.render('viewAllEmployees', {
             users,
+            privilage,
             loggedIn: true
         });
     } catch (err) {
@@ -47,7 +55,14 @@ router.get('/allemp', withAuth, async (req, res) => {
 //time off page for emp, where employee can request timeoff
 router.get('/timeoff', withAuth, async (req, res) => {
     try {
+        const privilageData = await Employee.findByPk(req.session.userId, {
+            attributes: { exclude: ['password'] },
+            include: {model:Role}
+        });
+
+        const privilage = privilageData.get({ plain: true });
         res.render('timeoff', {
+            privilage,
             loggedIn: true
         });
     } catch (err) {
@@ -116,11 +131,17 @@ router.get('/benefits', withAuth, async (req, res) => {
         
 
         const user = userData.get({ plain: true });
+        const privilageData = await Employee.findByPk(req.session.userId, {
+            attributes: { exclude: ['password'] },
+            include: {model:Role}
+        });
 
+        const privilage = privilageData.get({ plain: true });
         console.log(user)
 
         res.render('benefits', {
             user,
+            privilage,
             loggedIn: true
         });
     } catch (err) {

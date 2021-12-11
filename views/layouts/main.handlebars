@@ -35,10 +35,9 @@
             <a class="sideNavLinks" href="/timeOff">Time Off</a>
             <a class="sideNavLinks" href="/allemp">Employees</a>
         {{!-- render HR Page / BM Page / Executive Page based on priviledge --}}
-        {{#if (or 
-                (eq privilege_Level '4'))}}
+        {{#ifCond  privilage.role.id 6}}
             <a class="sideNavLinks" href="/HRProfile">HR Profile</a>
-        {{/if}}
+        {{/ifCond}}
 
         </aside>
         {{/if}}
