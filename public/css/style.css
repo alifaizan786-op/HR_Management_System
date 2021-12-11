@@ -14,7 +14,7 @@ header {
     padding: 1%;
     margin: 10px 10px;
     height: 150px;
-    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    background-image: radial-gradient(circle, #F3F3F3, #BDBDBD, #969595);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
 }
@@ -22,7 +22,7 @@ header {
 .topNavBar {
     display: flex;
     justify-content:space-around;
-    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    background-image: radial-gradient(circle, #F3F3F3, #BDBDBD, #969595);
 }
 
 .topNavLinks {
@@ -51,7 +51,7 @@ header {
     font-family: 'Inter', sans-serif;
     margin: 10px 10px;
     width: 100%;
-    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    background-image: radial-gradient(circle, #F3F3F3, #BDBDBD, #969595);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     padding: 5% 0%;
@@ -65,7 +65,7 @@ header {
 aside {
     margin: 10px 10px;
     padding: 50px 10px;
-    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    background-image: radial-gradient(circle, #F3F3F3, #BDBDBD, #969595);
     border-radius: 10px;
 }
 
@@ -112,7 +112,7 @@ aside {
     font-family: 'Inter', sans-serif;
     font-size: 25px;
     color: black;
-    background-image: radial-gradient(circle, #BDBDBD, #969595, #756F6F);
+    background-image: radial-gradient(circle, #F3F3F3, #BDBDBD, #969595);
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: .5s;
