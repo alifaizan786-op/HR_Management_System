@@ -1,7 +1,7 @@
 const Employee = require('./Employee')
 const Role = require('./Role')
 const Benefit = require('./Benefit')
-const Time_off = require('./TimeOff')
+const Time_off = require('./timeOff')
 // const { Model } = require('sequelize/types')
 
 Role.hasMany(Employee, {
